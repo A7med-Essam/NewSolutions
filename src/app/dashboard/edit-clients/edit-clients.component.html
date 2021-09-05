@@ -1,0 +1,135 @@
+  <main id="clients">
+    <header>
+      <section id="section-home">
+        <div class="container p-0">
+          <div class="content d-flex justify-content-between align-items-center">
+            <h1 class="page-title text-white">Clients</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="/dashboard" class="text-reset">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Our Clients</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section id="section2" class="py-5">
+      <div class="container px-0 py-5">
+        <div class="header-content mb-4 text-center" *ngIf="AddNewClient">
+            <form [formGroup]="Section1"  (ngSubmit)="SetSection(Section1)">
+              <div class="form-group">
+                <label class="h5">*Small Title</label>
+                <input type="text" class="form-control m-auto text-info w-50" formControlName="SmallTitle">
+                <small class="text-danger" *ngIf="Section1.get('SmallTitle').invalid && Section1.get('SmallTitle').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h2">*Big Title(First Line)</label>
+                <input type="text" class="form-control m-auto text-info w-75" formControlName="BigTitle1">
+                <small class="text-danger" *ngIf="Section1.get('BigTitle1').invalid && Section1.get('BigTitle1').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h4">*Big Title(Second Line)</label>
+                <input type="text" class="form-control  m-auto text-info w-75" formControlName="BigTitle2">
+                <small class="text-danger" *ngIf="Section1.get('BigTitle2').invalid && Section1.get('BigTitle2').touched">
+                  This field is required!
+                </small>
+              </div>
+              <button class="btn btn-info submit" type="submit" [disabled]="Section1.invalid">Save Changes</button>
+            </form>
+        </div>
+        <div class="body mt-5">
+          <h2 class="text-info text-center mb-4 fa-2x">Add New Client</h2>
+          <div class="row teamMembers">
+            <div class="col-lg-4 offset-lg-4 offset-md-3 col-md-6 p-0 my-2">
+              <div class="team-profile">
+                <img src="../../../assets/Pages/OurClients/section2/member1.jpg" alt="Team Member1" class="img-fluid w-100">
+              </div>
+              <div class="team-info text-center my-4">
+                <form [formGroup]="NewClient"  (ngSubmit)="SetClient(NewClient)">
+                  <div class="form-group">
+                    <div class="box">
+                      <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" accept="image/*" formControlName="ImageUrl"
+                        data-multiple-caption="{count} files selected" multiple="false" (change)="onFileChange($event.target.files)" />
+                      <label for="file-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
+                    </div>
+                    <small class="text-danger" *ngIf="NewClient.get('ImageUrl').invalid && NewClient.get('ImageUrl').touched">
+                      Please select an Image
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Name</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="Name">
+                    <small class="text-danger" *ngIf="NewClient.get('Name').invalid && NewClient.get('Name').touched">
+                      This field is required!
+                    </small>
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="h6">*Job Title</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="JobTitle">
+                    <small class="text-danger" *ngIf="NewClient.get('JobTitle').invalid && NewClient.get('JobTitle').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Twitter URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="TwitterUrl">
+                    <small class="text-danger" *ngIf="NewClient.get('TwitterUrl').invalid && NewClient.get('TwitterUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="h6">*LinkedIn URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="LinkedInUrl">
+                    <small class="text-danger" *ngIf="NewClient.get('LinkedInUrl').invalid && NewClient.get('LinkedInUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Facebook URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="FacebookUrl">
+                    <small class="text-danger" *ngIf="NewClient.get('FacebookUrl').invalid && NewClient.get('FacebookUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Instgram URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="instegramUrl">
+                    <small class="text-danger" *ngIf="NewClient.get('instegramUrl').invalid && NewClient.get('instegramUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+
+                  <button class="btn btn-info submit" type="submit" [disabled]="NewClient.invalid">Add Client</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section3" class="py-5" *ngIf="AddNewClient">
+      <div class="container d-flex justify-content-between align-items-center text-white py-5 flex-wrap">
+        <div class="title ml-5 my-5">
+          <span>We Carry more Than Just Good Coding Skills</span>
+          <h2>Let's Build Your Website!</h2>
+        </div>
+        <button routerLink="/contact-us" class="btn my-5 mr-5">CONTACT US</button>
+      </div>
+    </section>
+  </main>

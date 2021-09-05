@@ -1,0 +1,106 @@
+<header>
+    <!-- Home Section -->
+    <section id="section-home">
+        <div class="container p-0">
+        <div class="content d-flex justify-content-between align-items-center">
+            <h1 class="page-title text-white">Users</h1>
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="/dashboard" class="text-reset">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Users</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </section>
+</header>
+
+<section class="overflow-auto mt-5 mb-4">
+    <div class="container my-1" id="usersTable">
+        <h3 *ngIf="RoleError" class="text-danger h6">{{RoleError}}</h3>
+        <div class="row m-0">
+            <div class="col-12">
+                <div class="panel panel-default">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="panel-heading text-muted">
+                            Users Data
+                        </div>
+                        <div class="panel-heading">
+                            <div class="input-group">
+                                <input class="form-control" id="system-search1" placeholder="Search for" style="box-shadow: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="container">
+                            <table class="table table-list-search text-center">
+                                <thead>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Email</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   <tr *ngFor="let item of Users | paginate: {itemsPerPage: pageSize, currentPage: paginationPage , totalItems:TotalRecords}">
+                                        <td>{{item?.userName}}</td>
+                                        <td>{{item?.email}}</td>
+                                        <td>
+                                            <button class="btn text-white btn-sm mx-1 btn-success" (click)="addRole(item?.id,'Admin',$event)">SET ADMIN</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>   
+                            <pagination-controls (pageChange)="paginationPage = $event" 
+                            (pageBoundsCorrection)="pageChanged($event)"
+                            (click)="pageChanged($event)"
+                            maxSize="6"
+                            autoHide="true"
+                            responsive="true"
+                            previousLabel="Previous Page"
+                            nextLabel="Next Page">
+                            </pagination-controls>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+    <hr>
+<section class="overflow-auto my-5">
+    <div class="container my-1" id="AdminsTable">
+        <div class="col-12">
+            <div class="panel panel-default">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="panel-heading text-muted">
+                        Admins Data
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="container">
+                        <table class="table  text-center"> 
+                            <thead>
+                                <tr>
+                                    <th>UserName</th>
+                                    <th>Email</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of Admins">
+                                    <td>{{item?.userName}}</td>
+                                    <td>{{item?.email}}</td>
+                                    <td>
+                                        <button class="btn text-white btn-sm mx-1 btn-danger" (click)="removeRole(item?.id,$event)">REMOVE ADMIN</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>   
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>

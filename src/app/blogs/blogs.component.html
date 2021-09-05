@@ -1,0 +1,127 @@
+<header>
+    <!-- Home Section -->
+    <section id="section-home">
+        <div class="container p-0">
+            <div class="content d-flex justify-content-between align-items-center">
+            <h1 class="page-title text-white">Blogs</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/our-projects" class="text-reset">Projects</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Blogs</li>
+                </ol>
+            </nav>
+            </div>
+        </div>
+    </section>
+</header>
+<main class="py-5">
+    <!-- blog section -->
+    <section>
+        <div class="container">
+            <h1 class="text-center" style="text-shadow: 2px 2px #d6d6d6;">{{projectInfo?.bigTitle}}</h1>
+            <div class="rounded bg-white mt-4 shadow-lg text-center">
+                <img [src]="projectInfo?.imageUrl" [alt]="projectInfo?.smallTitle" class="w-100 rounded-top">
+                <small>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a class="text-reset">{{projectInfo?.date | date}} </a></li>
+                            <li class="breadcrumb-item activee" aria-current="page">{{projectInfo?.category}}</li>
+                        </ol>
+                    </nav>
+                </small>
+                <p class="p-4">
+                    <i>
+                        <mark>{{projectInfo?.smallTitle}}</mark>
+                        <br>
+                        {{projectInfo?.details}}
+                    </i>
+                </p>
+                <div class="container"  style="background-color: #f3f3f3;">
+                    <div class="py-3 d-flex justify-content-between">
+                        <h2 class="h5 m-0 share-blog">Share This</h2>
+                        <div class="contact-icons">
+                            <a target="_blank" href="#"  class="text-reset text-decoration-none"> <i class="fab fa-twitter"></i> </a>
+                            <a target="_blank" href="#"  class="text-reset text-decoration-none"> <i class="fab fa-facebook-f"></i> </a>
+                            <a target="_blank" href="#"  class="text-reset text-decoration-none"> <i class="fab fa-linkedin-in"></i> </a>
+                            <a target="_blank" href="#"  class="text-reset text-decoration-none"> <i class="fab fa-instagram"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- reviews -->
+    <section id="reviews" *ngIf="blogReviews">
+        <div class="container rounded mt-5">
+            <div class="row m-0">
+                <div class="col-12 bg-gray shadow-sm rounded mx-1 py-4 my-3" *ngFor="let item of blogReviews 
+                | paginate: {itemsPerPage: pageSize, currentPage: paginationPage , totalItems:TotalRecords}">
+                    <div class="row m-0">
+                        <div class="col-lg-1 col-md-2 col-3">
+                            <img src="../../assets/Pages/user.png" alt="user" class="img-fluid rounded">
+                        </div>
+                        <div class="col-lg-9 col-8">
+                            <h6 class="m-0 text-main">
+                                <i>{{item?.name}}</i>
+                            </h6>
+                            <small>{{item?.email}}</small>
+                        </div>
+                        <div class="col-md-2 col-12 text-right date text-muted">
+                            <small>{{item?.date | date}}</small>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p>
+                                {{item?.comment}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <pagination-controls (pageChange)="paginationPage = $event" 
+                (pageBoundsCorrection)="pageChanged($event)"
+                (click)="pageChanged($event)"
+                maxSize="6"
+                autoHide="true"
+                responsive="true"
+                previousLabel="Previous Page"
+                nextLabel="Next Page">
+                </pagination-controls>
+            </div>
+        </div>
+    </section>
+
+    <!-- post review section -->
+    <section>
+        <div class="container py-4  mt-5">
+            <h3 class="h6 mb-4">- Leave A Reply</h3>
+            <form [formGroup]="reviews" (ngSubmit)="addReviews(reviews.value)">
+                <textarea rows="5" class="form-control" placeholder="*Your Comments" formControlName="comment"
+                    [class.is-invalid]="reviews.controls.comment.invalid && reviews.controls.comment.touched"
+                ></textarea>
+                <div *ngIf= "reviews.controls.comment.invalid && reviews.controls.comment.touched"  class="text-danger">
+                    This field is required
+                </div>
+                <div class="d-flex mt-4">
+                    <input type="text" class="form-control mr-2" placeholder="*Your Name" formControlName="name"
+                    [class.is-invalid]="reviews.controls.name.invalid && reviews.controls.name.touched">
+                    <!-- <input type="text" class="form-control ml-2" placeholder="*Your Email"> -->
+                    <input type="text" class="form-control" placeholder="*Your Email" formControlName="email"
+                    [class.is-invalid]="reviews.controls.email.invalid && reviews.controls.email.touched">
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div *ngIf= "reviews.controls.name.invalid && reviews.controls.name.touched"  class="text-danger">
+                            This field is required
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div *ngIf= "reviews.controls.email.invalid && reviews.controls.email.touched"  class="text-danger">
+                            please enter a valid email
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark rounded mt-4">Post Comment</button>
+            </form>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,272 @@
+    <main id="about">
+      <header>
+        <section id="section-home">
+          <div class="container p-0">
+            <div class="content d-flex justify-content-between align-items-center">
+              <h1 class="page-title text-white">About Us</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                  <li class="breadcrumb-item"><a routerLink="/dashboard" class="text-reset">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </header>
+  
+      <section id="section1" class="py-5">
+        <div class="container-md px-0 py-5">
+          <div class="row mx-0">
+            <div class="col-lg-6 d-flex align-items-center">
+              <div class="w-100">
+                <div class="content text-dark">
+                      <form [formGroup]="Section1" (ngSubmit)="SetSection(Section1,'1')">
+                        <div class="form-group">
+                          <label class="h5">*Small Title</label>
+                          <input type="text" class="form-control m-auto text-info" formControlName="SmallTitle">
+                          <small class="text-danger" *ngIf="Section1.get('SmallTitle').invalid && Section1.get('SmallTitle').touched">
+                            This field is required!
+                          </small>
+                        </div>
+          
+                        <div class="form-group">
+                          <label class="h2">*Big Title(First Line)</label>
+                          <input type="text" class="form-control m-auto text-info" formControlName="BigTitle1">
+                          <small class="text-danger" *ngIf="Section1.get('BigTitle1').invalid && Section1.get('BigTitle1').touched">
+                            This field is required!
+                          </small>
+                        </div>
+        
+                        <div class="form-group">
+                          <label class="h4">*Big Title(Second Line)</label>
+                          <input type="text" class="form-control  m-auto text-info" formControlName="BigTitle2">
+                          <small class="text-danger" *ngIf="Section1.get('BigTitle2').invalid && Section1.get('BigTitle2').touched">
+                            This field is required!
+                          </small>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="h4">*Details Regular</label>
+                          <textarea rows="4" class="text-info form-control" formControlName="DetailsRegular"></textarea>
+                          <small class="text-danger" *ngIf="Section1.get('DetailsRegular').invalid && Section1.get('DetailsRegular').touched">
+                            This field is required!
+                          </small>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="h4">*Details Bold</label>
+                          <textarea  rows="3" class="text-info form-control" formControlName="DetailsBold"></textarea>
+                          <small class="text-danger" *ngIf="Section1.get('DetailsBold').invalid && Section1.get('DetailsBold').touched">
+                            This field is required!
+                          </small>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="h3">*Video Youtube Link</label>
+                          <input type="text" class="form-control  m-auto text-info" formControlName="VideoLink">
+                          <small class="text-danger" *ngIf="Section1.get('VideoLink').invalid && Section1.get('VideoLink').touched">
+                            This field is required!
+                          </small>
+                        </div>
+                        <button class="btn btn-info submit" type="submit" [disabled]="Section1.invalid">Save Changes</button>
+                      </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-4">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="position-relative pointer">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <div class="ribbon"></div>
+                        <h4>Our Mission</h4>
+                      </div>
+                      <img src="../../../assets/Pages/Home/section3/image-box1.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mt-lg-4">
+                    <div class="position-relative pointer">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <div class="ribbon"></div>
+                        <h4>Our Vision</h4>
+                      </div>
+                      <img src="../../../assets/Pages/Home/section3/image-box2.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="position-relative pointer">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <div class="ribbon"></div>
+                        <h4>Our Philosophy</h4>
+                      </div>
+                      <img src="../../../assets/Pages/Home/section3/image-box3.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mt-lg-4">
+                    <div class="position-relative pointer">
+                      <div class="overlay d-flex justify-content-center align-items-center">
+                        <div class="ribbon"></div>
+                        <h4>Our Strategy</h4>
+                      </div>
+                      <img src="../../../assets/Pages/Home/section3/image-box4.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="section2" class="py-5">
+        <div class="elementor-background-overlay"></div>
+        <div class="mx-5 py-5">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="../../../assets/Pages/About/section5/image1-about.png" alt="What we do" class="img-fluid">
+            </div>
+            <div class="col-lg-5 text-white">
+              <div class="content">
+                <form class="mb-4" [formGroup]="Section2" (ngSubmit)="SetSection(Section2,'2')">
+                  <div class="form-group">
+                    <label class="h5">*Small Title 1</label>
+                    <input type="text" class="form-control m-auto text-info" formControlName="SmallTitle1">
+                    <small class="text-danger" *ngIf="Section2.get('SmallTitle1').invalid && Section2.get('SmallTitle1').touched">
+                      This field is required!
+                    </small>
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="h2">*Big Title(First Line)</label>
+                    <input type="text" class="form-control m-auto text-info" formControlName="BigTitle1">
+                    <small class="text-danger" *ngIf="Section2.get('BigTitle1').invalid && Section2.get('BigTitle1').touched">
+                      This field is required!
+                    </small>
+                  </div>
+  
+                  <div class="form-group">
+                    <label class="h4">*Big Title(Second Line)</label>
+                    <input type="text" class="form-control m-auto text-info" formControlName="BigTitle2">
+                    <small class="text-danger" *ngIf="Section2.get('BigTitle2').invalid && Section2.get('BigTitle2').touched">
+                      This field is required!
+                    </small>
+                  </div>
+
+                  <div class="icons d-flex align-items-center mt-5 mb-4 flex-wrap">
+                    <i class="fab fa-java"></i>
+                    <i class="fab fa-angular"></i>
+                    <i class="fab fa-php"></i>
+                    <i class="fab fa-js-square"></i>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h5">*Small title 2</label>
+                    <input type="text" class="form-control m-auto text-info" formControlName="SmallTitle2">
+                    <small class="text-danger" *ngIf="Section2.get('SmallTitle2').invalid && Section2.get('SmallTitle2').touched">
+                      This field is required!
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h4">*Details</label>
+                    <textarea rows="4" class="text-info form-control" formControlName="Details"></textarea>
+                    <small class="text-danger" *ngIf="Section2.get('Details').invalid && Section2.get('Details').touched">
+                      This field is required!
+                    </small>
+                  </div>
+                  <button class="btn btn-info submit" type="submit" [disabled]="Section2.invalid">Save Changes</button>
+                </form>
+
+                <a href="#" class="btn-details">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                  LEARN MORE
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section3" class="py-5">
+        <div class="container py-5 px-0">
+          <div class="row m-0">
+            <div class="col-lg-6 my-4">
+              <div class="header-content">
+                <form class="mb-4" [formGroup]="Section3" (ngSubmit)="SetSection(Section3,'3')">
+
+                  <div class="form-group">
+                    <label class="h5">*Small Title</label>
+                    <input type="text" class="form-control m-auto text-info" formControlName="SmallTitle">
+                    <small class="text-danger" *ngIf="Section3.get('SmallTitle').invalid && Section3.get('SmallTitle').touched">
+                      This field is required!
+                    </small>
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="h2">*Big Title(First Line)</label>
+                    <input type="text" class="form-control m-auto text-info" formControlName="BigTitle1">
+                    <small class="text-danger" *ngIf="Section3.get('BigTitle1').invalid && Section3.get('BigTitle1').touched">
+                      This field is required!
+                    </small>
+                  </div>
+  
+                  <div class="form-group">
+                    <label class="h4">*Big Title(Second Line)</label>
+                    <input type="text" class="form-control  m-auto text-info" formControlName="BigTitle2">
+                    <small class="text-danger" *ngIf="Section3.get('BigTitle2').invalid && Section3.get('BigTitle2').touched">
+                      This field is required!
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h4">*Details</label>
+                    <textarea rows="4" class="text-info form-control" formControlName="Details"></textarea>
+                    <small class="text-danger" *ngIf="Section3.get('Details').invalid && Section3.get('Details').touched">
+                      This field is required!
+                    </small>
+                  </div>
+                  <button class="btn btn-info submit" type="submit" [disabled]="Section3.invalid">Save Changes</button>
+                </form>
+              </div>
+              <div class="progress-technology">
+                <div class="d-flex justify-content-between">
+                  <span>MOBILE DEVELOPMENT</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 85%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+  
+                <div class="d-flex justify-content-between">
+                  <span>WEB DEVELOPMENT</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 90%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <span>DESKTOP DEVELOPMENT</span>
+                  <span>99%</span> 
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 99%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+  
+                <div class="d-flex justify-content-between">
+                  <span>UI/UX DESIGN</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 75%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 my-4 text-center">
+              <img src="../../../assets/Pages/About/section8/image2-about.png" alt="TECHNOLOGY IMG" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>

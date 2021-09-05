@@ -1,0 +1,57 @@
+<header>
+      <!-- Home Section -->
+      <section id="section-home">
+        <div class="container p-0">
+          <div class="content d-flex justify-content-between align-items-center">
+            <h1 class="page-title text-white">Clients</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Our Clients</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+</header>
+
+<section id="section2" class="py-5">
+      <div class="container px-0 py-5">
+        <div class="header-content mb-4 text-center">
+          <span>{{section1?.smallTitle}}</span>
+          <h2>{{section1?.bigTitle1}} 
+            <br>
+            <div class="h3 font-weight-bold">{{section1?.bigTitle2}}</div>
+          </h2>
+        </div>
+        <div class="body mt-5">
+              <div class="row teamMembers">
+                <div class="col-lg-3 col-md-6 p-0 my-2" *ngFor="let item of ClientsInfo">
+                  <div class="team-profile">
+                    <img [src]="item?.imageUrl" alt="Team Member1" class="img-fluid w-100" style="height: 350px;" >
+                    <div class="team-contact d-flex flex-column">
+                        <a rel="nofollow" target="_blank" href="{{item?.twitterUrl}}" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a rel="nofollow" target="_blank" href="{{item?.linkedInUrl}}" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a rel="nofollow" target="_blank" href="{{item?.facebookUrl}}" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a rel="nofollow" target="_blank" href="{{item?.instegramUrl}}" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="team-info text-center my-4">
+                    <h4>{{item?.name}}</h4>
+                    <span>{{item?.jobTitle}}</span>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+</section>
+
+<section id="section3" class="py-5">
+      <div class="container d-flex justify-content-between align-items-center text-white py-5 flex-wrap">
+        <div class="title ml-5 my-5">
+          <span>We Carry more Than Just Good Coding Skills</span>
+          <h2>Let's Build Your Website!</h2>
+        </div>
+        <button class="btn my-5 mr-5" routerLink="/contact-us" id="getContact">CONTACT US</button>
+      </div>
+</section>

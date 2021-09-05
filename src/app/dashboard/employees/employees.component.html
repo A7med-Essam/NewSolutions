@@ -1,0 +1,97 @@
+<main>
+    <header>
+      <section id="section-home">
+        <div class="container p-0">
+          <div class="content d-flex justify-content-between align-items-center">
+            <h1 class="page-title text-white">Employees</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="/dashboard" class="text-reset">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Our Employees</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section id="section2" class="py-5">
+      <div class="container px-0 py-5">
+        <div class="body mt-5">
+          <h2 class="text-info text-center mb-4 fa-2x">Add New Employee</h2>
+          <div class="row teamMembers">
+            <div class="col-lg-4 offset-lg-4 offset-md-3 col-md-6 p-0 my-2">
+              <div class="team-profile">
+                <img src="../../../assets/Pages/OurClients/section2/member1.jpg" alt="Team Member1" class="img-fluid w-100">
+              </div>
+              <div class="team-info text-center my-4">
+                  <form [formGroup]="NewEmployee"  (ngSubmit)="SetEmployee(NewEmployee)">
+                  <div class="form-group">
+                    <div class="box">
+                      <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" accept="image/*" formControlName="ImageUrl"
+                        data-multiple-caption="{count} files selected" multiple="false" (change)="onFileChange($event.target.files)" />
+                      <label for="file-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
+                    </div>
+                    <small class="text-danger" *ngIf="NewEmployee.get('ImageUrl').invalid && NewEmployee.get('ImageUrl').touched">
+                      Please select an Image
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Name</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="Name">
+                    <small class="text-danger" *ngIf="NewEmployee.get('Name').invalid && NewEmployee.get('Name').touched">
+                      This field is required!
+                    </small>
+                  </div>
+    
+                  <div class="form-group">
+                    <label class="h6">*Job Title</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="JobTitle">
+                    <small class="text-danger" *ngIf="NewEmployee.get('JobTitle').invalid && NewEmployee.get('JobTitle').touched">
+                      This field is required!
+                    </small>  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Twitter URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="TwitterUrl">
+                    <small class="text-danger" *ngIf="NewEmployee.get('TwitterUrl').invalid && NewEmployee.get('TwitterUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="h6">*LinkedIn URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="LinkedInUrl">
+                    <small class="text-danger" *ngIf="NewEmployee.get('LinkedInUrl').invalid && NewEmployee.get('LinkedInUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Facebook URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="FacebookUrl">
+                    <small class="text-danger" *ngIf="NewEmployee.get('FacebookUrl').invalid && NewEmployee.get('FacebookUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h6">*Instgram URL</label>
+                    <input type="text" class="form-control  m-auto text-info w-75" formControlName="instegramUrl">
+                    <small class="text-danger" *ngIf="NewEmployee.get('instegramUrl').invalid && NewEmployee.get('instegramUrl').touched">
+                      This field is required!
+                    </small>                  
+                  </div>
+
+                  <button class="btn btn-info submit" type="submit" [disabled]="NewEmployee.invalid">Add Employee</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>

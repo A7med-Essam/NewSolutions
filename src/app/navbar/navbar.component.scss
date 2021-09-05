@@ -1,0 +1,201 @@
+#bodyOverlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 0;
+    z-index: 1031;
+}
+
+/* nav-bar */
+nav#Toggle-navbar ul li , nav#Toggle-navbar .navbar-brand{
+    padding: 30px 10px;
+}
+
+/*Sidenav*/
+.aside-nav{
+    display: block;
+    color: #fff;
+    padding: 30px 10px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px -3px #555454;
+    padding-top: 0px;
+}
+
+#mySidenav a:not(.closebtn) {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #4d4d4d;
+    display: block;
+    transition: 0.3s;
+    margin: 5px auto;
+    border-bottom: 1px solid #e7e7e7;
+} 
+
+#mySidenav a:not(.closebtn):hover{
+    background-color: rgb(207, 207, 207);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 20;
+    left: -30px;
+    font-size: 26px;
+    margin-left: 50px;
+    color: #4d4d4d;   
+    text-decoration: none; 
+}
+
+/* =============== */
+/* info aside */
+aside#contactInfo{
+    background-color: #e7e7e7;
+}
+
+aside#contactInfo .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside#contactInfo .icons a{
+    background-color: #0A0E1C;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+aside#contactInfo .icons a:hover{
+    transform: translateY(-40%);
+}
+
+aside#contactInfo .icons i.fa-twitter{color: #6FC7E7}
+aside#contactInfo .icons i.fa-facebook-f{color: #224FDC}
+aside#contactInfo .icons i.fa-linkedin-in{color: #5298EB}
+aside#contactInfo .icons i.fa-instagram{color: #E8962E}
+
+.active-link{
+    border-bottom: 3px solid #43BAFF;
+}
+
+
+
+// media query
+
+@media screen and (max-width: 450px) {
+    aside#mySidenav ul.navbar-nav li a {font-size: 18px !important;}
+}
+
+@media screen and (min-width: 1200px) {
+    .aside-nav{
+        display: none;
+    }
+}
+
+
+/* search */
+.overlay-search { 
+    z-index: 1060;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s linear;
+   }
+    
+.overlay-search.open {
+     top: 0; 
+    }
+
+.overlay-search .form_search-wrap { 
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); 
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    min-width: 0;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    width: 80%;
+    left: 0; 
+    right: 0;
+    margin: 0 auto; 
+  }
+
+.overlay-search .form_search-wrap form .search-input { 
+    background-color: transparent;
+    padding: 0 30px 25px 0;
+    border: none;
+    border-bottom: 2px solid #c1c1c1;
+    color: #c1c1c1;
+    font-size: 24px;
+    transition: all 1s ease;
+    margin-bottom: 30px;
+    width: 100%;
+    outline: none;
+}
+
+.overlay-search .form_search-wrap form .search-input:focus { 
+    border-bottom: 2px solid #43BAFF; 
+    color: #fff;
+ }
+
+.overlay-search .form_search-wrap form .search-close { 
+    width: 30px;
+     height: 30px; 
+    position: absolute;
+     display: block; 
+     right: -5px;
+      top: 0;
+     }
+
+.overlay-search .form_search-wrap form .search-close span { 
+    display: block; 
+    height: 2px;
+    background: #c1c1c1; 
+    border-radius: 3px;
+    margin: auto;
+    width: 100%; transition: all .3s ease; 
+    top: 50%; 
+    position: absolute;
+ }
+
+.overlay-search .form_search-wrap form .search-close:hover span { 
+    background: #43BAFF;
+ }
+
+.overlay-search .form_search-wrap form .search-close span:first-of-type {
+    transform: rotate(-45deg); 
+}
+
+.overlay-search .form_search-wrap form .search-close span:last-of-type {
+    transform: rotate(45deg); 
+}
+
+.overlay-search .form_search-wrap form .search-input:focus + .search-close span { 
+    background: #43BAFF; 
+}

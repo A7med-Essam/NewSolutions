@@ -1,0 +1,282 @@
+    
+    <header>
+      <!-- Home Section -->
+        <section id="section-home">
+          <div class="container p-0">
+            <div class="content d-flex justify-content-between align-items-center">
+              <h1 class="page-title text-white">About Us</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+    </header>
+
+    <section id="section2" class="py-5">
+        <div class="container-md px-0 py-5">
+          <div class="row mx-0">
+            <div class="col-lg-6 d-flex align-items-center">
+              <div>
+                <div class="content text-dark">
+                  <span>{{section1?.smallTitle}}</span>
+                  <h2 class="main-heading font-weight-bold fa-2x">
+                    {{section1?.bigTitle1}}
+                    {{section1?.bigTitle2}}
+                  </h2>
+                  <p class="mr-5 mt-4 text-muted" style="line-height: 1.875;">
+                    {{section1?.detailsRegular}}
+                  </p>
+                  <em>
+                  <strong class="text-dark">
+                    {{section1?.detailsBold}}
+                  </strong>
+                  </em>
+                  <div class="video d-flex justify-content-start align-items-center">
+                    <a class="play-2">
+                      <div class="sonar-wrapper btn-play">
+                        <div class="sonar-emitter">
+                          <i class="fas fa-play"></i>
+                          <div class="sonar-wave"></div>
+                        </div>
+                      </div>
+                    </a>
+                    <span>video showcase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-4">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../assets/Pages/Home/section3/image-box1.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-sm-6 mt-lg-4">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../assets/Pages/Home/section3/image-box2.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../assets/Pages/Home/section3/image-box3.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-sm-6 mt-lg-4">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../assets/Pages/Home/section3/image-box4.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="section4">
+        <div class="container py-5">
+          <div class="owl-carousel" id="owl1">
+            <div class="item">
+              <img src="../../assets/Pages/Home/section4/client1.svg" alt="Client logo" class="img-fluid">
+            </div>
+            <div class="item">
+              <img src="../../assets/Pages/Home/section4/client2.svg" alt="Client logo" class="img-fluid">
+            </div>
+            <div class="item">
+              <img src="../../assets/Pages/Home/section4/client3.svg" alt="Client logo" class="img-fluid">
+            </div>
+            <div class="item">
+              <img src="../../assets/Pages/Home/section4/client4.png" alt="Client logo" class="img-fluid" style="width: 100px;">
+            </div>
+            <div class="item">
+              <img src="../../assets/Pages/Home/section4/client5.svg" alt="Client logo" class="img-fluid">
+            </div>
+            <div class="item">
+              <img src="../../assets/Pages/Home/section4/client6.svg" alt="Client logo" class="img-fluid">
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="section5" class="py-5">
+        <div class="elementor-background-overlay"></div>
+        <div class="mx-5 py-5">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="../../assets/Pages/About/section5/image1-about.png" alt="What we do" class="img-fluid">
+            </div>
+            <div class="col-lg-5 text-white">
+              <div class="content">
+                <span>
+                  {{section2?.smallTitle1}}
+                </span>
+                <h2>
+                  {{section2?.bigTitle1}}
+                  {{section2?.bigTitle2}}
+                </h2>
+                <div class="icons d-flex align-items-center mt-5 mb-4 flex-wrap">
+                  <i class="fab fa-java"></i>
+                  <i class="fab fa-angular"></i>
+                  <i class="fab fa-php"></i>
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <h5>
+                  {{section2?.smallTitle2}}
+                </h5>
+                <p>
+                  {{section2?.details}}
+                </p>
+                <a href="#our-projects" class="btn-details pointer">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                  LEARN MORE
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="section6" class="py-5">
+        <div class="container py-5">
+          <div class="head text-center">
+            <span>{{OurTeamHeader?.smallTitle}}</span>
+            <h2>
+              {{OurTeamHeader?.bigTitle1}}
+              <div class="h3 font-weight-bold">{{OurTeamHeader?.bigTitle2}}</div>
+            </h2>
+            <p class="text-muted mt-4">
+              {{OurTeamHeader?.details}}
+            </p>
+          </div>
+          <div class="body mt-5">
+            <div class="row teamMembers">
+              <div class="col-lg-3 col-md-6 p-0 my-2" *ngFor="let item of EmployeesInfo">
+                <div class="team-profile">
+                  <img [src]="item?.imageUrl"
+                    alt="Team Member1" class="img-fluid w-100" style="height: 350px;">
+                  <div class="team-contact d-flex flex-column">
+                      <a rel="nofollow" href="{{item?.twitterUrl}}"  class="twitter"><i class="fab fa-twitter"></i></a>
+                      <a rel="nofollow" href="{{item?.linkedInUrl}}" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                      <a rel="nofollow" href="{{item?.facebookUrl}}" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a rel="nofollow" href="{{item?.instegramUrl}}" class="instagram"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="team-info text-center my-4">
+                  <h4>{{item?.name}}</h4>
+                  <span>{{item?.jobTitle}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="section7" class="py-5">
+        <div class="container text-white py-5">
+          <div class="row text-center">
+            <div class="col-md-3 col-6 my-3">
+              <h5 class="d-inline-block numscroller" [attr.data-max]="counter?.activeClients?counter?.activeClients:330"
+              data-min="0" data-increment="1" data-delay="1"></h5>
+              <span>+</span>
+              <h6>active Clients</h6>
+            </div>
+
+            <div class="col-md-3 col-6 my-3">
+              <h5 class="d-inline-block numscroller"  [attr.data-max]="counter?.projectsDone?counter?.projectsDone:128"
+              data-min="0" data-increment="1" data-delay="1"></h5>
+              <span>+</span>
+              <h6>PROJECTS DONE</h6>
+            </div>
+
+            <div class="col-md-3 col-6 my-3">
+              <h5 class="d-inline-block numscroller" [attr.data-max]="counter?.teamAdvisors?counter?.teamAdvisors:40"
+              data-min="0" data-increment="1" data-delay="1"></h5>
+              <span>+</span>
+              <h6>TEAM ADVISORS</h6>
+            </div>
+
+            <div class="col-md-3 col-6 my-3">
+              <h5 class="d-inline-block numscroller" [attr.data-max]="counter?.gloriousYears?counter?.gloriousYears:3"
+              data-min="0" data-increment="1" data-delay="2"></h5>
+              <span>+</span>
+              <h6>GLORIOUS YEARS</h6>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="section8" class="py-5">
+        <div class="container py-5 px-0">
+          <div class="row m-0">
+            <div class="col-lg-6 my-4">
+              <div class="header-content">
+                <span>{{section3?.smallTitle}}</span>
+                <h2>
+                  {{section3?.bigTitle1}}
+                  <div class="h3 font-weight-bold">{{section3?.bigTitle2}}</div>
+                </h2>
+                <p class="text-muted">
+                  {{section3?.details}}
+                </p>
+              </div>
+              <div class="progress-technology">
+                <div class="d-flex justify-content-between">
+                  <span>MOBILE DEVELOPMENT</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 85%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <span>WEB DEVELOPMENT</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 90%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <span>DESKTOP DEVELOPMENT</span>
+                  <span>99%</span> 
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 99%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <span>UI/UX DESIGN</span>
+                  <span>75%</span> 
+                </div>
+                <div class="progress">
+                  <div data-percentage="0%" style="width: 75%;" class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 my-4 text-center">
+              <img src="../../assets/Pages/About/section8/image2-about.png" alt="TECHNOLOGY IMG" class="img-fluid">
+            </div>
+          </div>
+        </div>
+    </section>
+

@@ -1,0 +1,90 @@
+[debug] [2021-09-05T09:59:29.808Z] ----------------------------------------------------------------------
+[debug] [2021-09-05T09:59:29.809Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ahmed Essam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init database
+[debug] [2021-09-05T09:59:29.809Z] CLI Version:   9.17.0
+[debug] [2021-09-05T09:59:29.809Z] Platform:      win32
+[debug] [2021-09-05T09:59:29.809Z] Node Version:  v14.17.2
+[debug] [2021-09-05T09:59:29.810Z] Time:          Sun Sep 05 2021 11:59:29 GMT+0200 (Eastern European Standard Time)
+[debug] [2021-09-05T09:59:29.810Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-05T09:59:29.850Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-05T09:59:29.850Z] > authorizing via signed-in user (madimodicom2@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\work\New Solutions\Ng_NewSolutions
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using newsolutions-cd00d. 
+[debug] [2021-09-05T09:59:33.246Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newsolutions-cd00d [none]
+[debug] [2021-09-05T09:59:33.568Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newsolutions-cd00d 200
+[debug] [2021-09-05T09:59:33.568Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newsolutions-cd00d {"projectId":"newsolutions-cd00d","projectNumber":"226404144241","displayName":"NewSolutions","name":"projects/newsolutions-cd00d","resources":{"hostingSite":"newsolutions-cd00d"},"state":"ACTIVE"}
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-09-05T09:59:33.570Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-05T09:59:33.571Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-05T09:59:33.820Z] <<< HTTP RESPONSE 200 {"date":"Sun, 05 Sep 2021 09:59:36 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-05T09:59:33.875Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/newsolutions-cd00d/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-09-05T09:59:34.904Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Sep 2021 09:59:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2021-09-05T09:59:34.905Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/newsolutions-cd00d/services/firebasedatabase.googleapis.com:enable  
+ 
+[debug] [2021-09-05T09:59:36.265Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Sep 2021 09:59:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-05T09:59:46.272Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/newsolutions-cd00d/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-09-05T09:59:47.228Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Sep 2021 09:59:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-09-05T09:59:47.237Z] > refreshing access token with scopes: []
+[debug] [2021-09-05T09:59:47.237Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-05T09:59:47.476Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 05 Sep 2021 09:59:49 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-05T09:59:47.509Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/newsolutions-cd00d [none]
+[debug] [2021-09-05T09:59:47.898Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/newsolutions-cd00d 200
+[debug] [2021-09-05T09:59:47.898Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/newsolutions-cd00d {"projectId":"newsolutions-cd00d","projectNumber":"226404144241","displayName":"NewSolutions","name":"projects/newsolutions-cd00d","resources":{"hostingSite":"newsolutions-cd00d"},"state":"ACTIVE"}
+[debug] [2021-09-05T10:00:01.043Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-05T10:00:01.043Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-05T10:00:01.290Z] <<< HTTP RESPONSE 200 {"date":"Sun, 05 Sep 2021 10:00:03 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-05T10:00:01.306Z] >>> HTTP REQUEST POST https://firebasedatabase.googleapis.com/v1beta/projects/newsolutions-cd00d/locations/us-central1/instances?databaseId=newsolutions-cd00d-default-rtdb&validateOnly=true  
+ {"type":"default_database"}
+[debug] [2021-09-05T10:00:02.280Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Sep 2021 10:00:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-05T10:00:02.288Z] >>> HTTP REQUEST POST https://firebasedatabase.googleapis.com/v1beta/projects/newsolutions-cd00d/locations/us-central1/instances?databaseId=newsolutions-cd00d-default-rtdb  
+ {"type":"default_database"}
+[debug] [2021-09-05T10:00:04.186Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Sep 2021 10:00:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2021-09-05T10:00:11.681Z] >>> HTTP REQUEST GET https://newsolutions-cd00d-default-rtdb.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2021-09-05T10:00:12.775Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 05 Sep 2021 10:00:15 GMT","content-type":"application/json; charset=utf-8","content-length":"161","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[debug] [2021-09-05T10:00:13.055Z] Error: EISDIR: illegal operation on a directory, open 'D:\work\New Solutions\Ng_NewSolutions\n'
+    at Object.openSync (fs.js:498:3)
+    at Object.writeFileSync (fs.js:1524:35)
+    at Object.createFileSync (C:\Users\Ahmed Essam\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:43:6)
+    at Config.writeProjectFile (C:\Users\Ahmed Essam\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:144:12)
+    at writeDBRules (C:\Users\Ahmed Essam\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\database.js:27:12)
+    at Object.doSetup [as database] (C:\Users\Ahmed Essam\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\database.js:117:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async init (C:\Users\Ahmed Essam\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.

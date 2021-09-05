@@ -1,0 +1,723 @@
+    <main id="home">
+      <header>
+        <section id="header-section">
+          <div class="vh-100 d-flex justify-content-center align-items-center py-5">
+            <div class="text-white text-center container">
+              <form [formGroup]="Section1" (ngSubmit)="SetSection(Section1,'1')">
+                <div class="form-group">
+                  <label class="h5">*Small Title</label>
+                  <input type="text" class="form-control w-50 m-auto text-info" formControlName="SmallTitle">
+                  <small class="text-danger" *ngIf="Section1.get('SmallTitle').invalid && Section1.get('SmallTitle').touched">
+                    This field is required!
+                  </small>
+                </div>
+  
+                <div class="form-group">
+                  <label class="h2">*Big Title(First Line)</label>
+                  <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle1">
+                  <small class="text-danger" *ngIf="Section1.get('BigTitle1').invalid && Section1.get('BigTitle1').touched">
+                    This field is required!
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label class="h4">*Big Title(Second Line)</label>
+                  <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle2">
+                  <small class="text-danger" *ngIf="Section1.get('BigTitle2').invalid && Section1.get('BigTitle2').touched">
+                    This field is required!
+                  </small>
+                </div>
+
+                <button class="btn btn-info submit" [disabled]="Section1.invalid">Save Changes</button>
+              </form>
+
+              <div class="row home-icons justify-content-center mt-4">
+                <div class="col-auto">
+                  <i class="fas fa-database fa-2x"></i>
+                  <h5 class="mt-3">Data Analytics</h5>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-globe fa-2x"></i>
+                  <h5 class="mt-3">web development</h5>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-paint-brush fa-2x"></i>
+                  <h5 class="mt-3">UI/UX Design</h5>
+                </div>
+                <div class="col-auto">
+                  <i class="far fa-file-alt fa-2x"></i>
+                  <h5 class="mt-3">QA & Testing</h5>
+                </div>
+                <div class="col-auto">
+                  <i class="fas fa-users fa-2x"></i>
+                  <h5 class="mt-3">dedicated team</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+  
+      <section id="section2" class="py-5">
+        <div class="container py-5">
+          <div class="text-center mb-5">
+
+            <form [formGroup]="Section2" (ngSubmit)="SetSection(Section2,'2')">
+              <div class="form-group">
+                <label class="h5">*Small Title</label>
+                <input type="text" class="form-control w-50 m-auto text-info" formControlName="SmallTitle">
+                <small class="text-danger" *ngIf="Section2.get('SmallTitle').invalid && Section2.get('SmallTitle').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h2">*Big Title(First Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle1">
+                <small class="text-danger" *ngIf="Section2.get('BigTitle1').invalid && Section2.get('BigTitle1').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h4">*Big Title(Second Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle2">
+                <small class="text-danger" *ngIf="Section2.get('BigTitle2').invalid && Section2.get('BigTitle2').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <button class="btn btn-info submit" [disabled]="Section2.invalid">Save Changes</button>
+            </form>
+          </div>
+          <img src="../../../assets/Pages/Home/section2/section2.png" alt="company" class="img-fluid">
+  
+          <div class="row mt-5">
+            <div class="col-md-4 mt-5">
+              <div class="content border position-relative py-4 pointer">
+                    <span class="big-number">01</span>
+                    <div class="d-flex">
+                      <div class="content-icon mx-4">
+                        <i class="fas fa-check-circle text-main2 mt-1" style="font-size: 40px;"></i>
+                      </div>
+                      <div class="content-box">
+                          <h5>Machine Learning</h5>
+                          <p class="m-0">Support and Evolution</p>
+                      </div>
+                    </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 mt-5">
+              <div class="content border position-relative py-4 pointer">
+                    <span class="big-number">02</span>
+                    <div class="d-flex">
+                      <div class="content-icon mx-4">
+                        <i class="fas fa-check-circle text-main3 mt-1" style="font-size: 40px;"></i>
+                      </div>
+                      <div class="content-box">
+                          <h5>Artificial Intelligence</h5>
+                          <p class="m-0">Support and Evolution</p>
+                      </div>
+                    </div>
+              </div>
+            </div>
+  
+            <div class="col-md-4 mt-5">
+              <div class="content border position-relative py-4 pointer">
+                    <span class="big-number">03</span>
+                    <div class="d-flex">
+                      <div class="content-icon mx-4">
+                        <i class="fas fa-check-circle text-main mt-1" style="font-size: 40px;"></i>
+                      </div>
+                      <div class="content-box">
+                          <h5>Augmented Reality</h5>
+                          <p class="m-0">Support and Evolution</p>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+   
+      <section id="section3" class="py-5">
+        <div class="container-md px-0 py-5">
+          <div class="row mx-0">
+            <div class="col-lg-6 d-flex align-items-center">
+              <div>
+                <div class="content text-white">
+
+                  <form [formGroup]="Section3" (ngSubmit)="SetSection(Section3,'3')">
+                    <div class="form-group">
+                      <label class="h5">*Small Title</label>
+                      <input type="text" class="form-control  text-info" formControlName="SmallTitle">
+                      <small class="text-danger" *ngIf="Section3.get('SmallTitle').invalid && Section3.get('SmallTitle').touched">
+                        This field is required!
+                      </small>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="h2">*Big Title(First Line)</label>
+                      <input type="text" class="form-control  m-auto text-info" formControlName="BigTitle1">
+                      <small class="text-danger" *ngIf="Section3.get('BigTitle1').invalid && Section3.get('BigTitle1').touched">
+                        This field is required!
+                      </small>
+                    </div>
+    
+                    <div class="form-group">
+                      <label class="h4">*Big Title(Second Line)</label>
+                      <input type="text" class="form-control  m-auto text-info" formControlName="BigTitle2">
+                      <small class="text-danger" *ngIf="Section3.get('BigTitle2').invalid && Section3.get('BigTitle2').touched">
+                        This field is required!
+                      </small>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="h4">*Details</label>
+                      <textarea cols="30" rows="10" class="text-info form-control" formControlName="Details"></textarea>
+                      <small class="text-danger" *ngIf="Section3.get('Details').invalid && Section3.get('Details').touched">
+                        This field is required!
+                      </small>
+                    </div>
+
+                    <div class="d-flex mt-5">
+                      <div class="form-group mr-2">
+                        <label class="h6">*Active Clients</label>
+                        <input type="number" class="form-control  text-info" formControlName="ActiveClients">
+                        <small class="text-danger" *ngIf="Section3.get('ActiveClients').invalid && Section3.get('ActiveClients').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                      <div class="form-group mx-2">
+                        <label class="h6">*Projects Done</label>
+                        <input type="number" class="form-control  text-info" formControlName="ProjectsDone">
+                        <small class="text-danger" *ngIf="Section3.get('ProjectsDone').invalid && Section3.get('ProjectsDone').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                      <div class="form-group mx-2">
+                        <label class="h6">*Team Advisors</label>
+                        <input type="number" class="form-control  text-info" formControlName="TeamAdvisors">
+                        <small class="text-danger" *ngIf="Section3.get('TeamAdvisors').invalid && Section3.get('TeamAdvisors').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                      <div class="form-group mx-2">
+                        <label class="h6">*Glorious Years</label>
+                        <input type="number" class="form-control  text-info" formControlName="GloriousYears">
+                        <small class="text-danger" *ngIf="Section3.get('GloriousYears').invalid && Section3.get('GloriousYears').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                    </div>
+    
+                    <button class="btn btn-info submit" [disabled]="Section3.invalid">Save Changes</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-4">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../../assets/Pages/Home/section3/image-box1.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-sm-6 mt-lg-4">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../../assets/Pages/Home/section3/image-box2.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../../assets/Pages/Home/section3/image-box3.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-sm-6 mt-lg-4">
+                  <div class="position-relative pointer">
+                    <div class="overlay d-flex justify-content-center align-items-center">
+                      <div class="ribbon"></div>
+                      <h4>Our Mission</h4>
+                    </div>
+                    <img src="../../../assets/Pages/Home/section3/image-box4.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="section4" class="py-5">
+        <div class="container py-5">
+          <div class="head text-center">
+              <form [formGroup]="Section4" (ngSubmit)="SetSection(Section4,'4')">
+                <div class="form-group">
+                  <label class="h5">*Small Title</label>
+                  <input type="text" class="form-control w-50 m-auto text-info" formControlName="SmallTitle">
+                  <small class="text-danger" *ngIf="Section4.get('SmallTitle').invalid && Section4.get('SmallTitle').touched">
+                    This field is required!
+                  </small>
+                </div>
+  
+                <div class="form-group">
+                  <label class="h2">*Big Title(First Line)</label>
+                  <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle1">
+                  <small class="text-danger" *ngIf="Section4.get('BigTitle1').invalid && Section4.get('BigTitle1').touched">
+                    This field is required!
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label class="h4">*Big Title(Second Line)</label>
+                  <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle2">
+                  <small class="text-danger" *ngIf="Section4.get('BigTitle2').invalid && Section4.get('BigTitle2').touched">
+                    This field is required!
+                  </small>
+                </div>
+
+                <button class="btn btn-info submit" [disabled]="Section4.invalid">Save Changes</button>
+              </form>
+          </div>
+          <div class="body mt-5">
+            <div class="row">
+              <div class="col-xl-4 col-md-6 my-4">
+                <div class="card">
+                  <div class="card-body p-4">
+                    <div class="icon-main">
+                      <i class="fas fa-laptop-code"></i>
+                    </div>
+                      <form [formGroup]="CardForm1" (ngSubmit)="SetSection(CardForm1,'4-Card1')">
+                        <div class="form-group">
+                          <label class="h5">*Card Title</label>
+                          <input type="text" class="form-control w-75 text-info"  formControlName="CardTitle">
+                          <small class="text-danger" *ngIf="CardForm1.get('CardTitle').invalid && CardForm1.get('CardTitle').touched">
+                            This field is required!
+                          </small>
+                        </div>
+          
+                        <div class="form-group">
+                          <label class="h6">*Card Details</label>
+                          <textarea  formControlName="CardDetails" cols="30" rows="10" class="text-info form-control"></textarea>
+                          <small class="text-danger" *ngIf="CardForm1.get('CardDetails').invalid && CardForm1.get('CardDetails').touched">
+                            This field is required!
+                          </small>
+                        </div>
+        
+                        <div class="form-group">
+                          <label class="h6">*Card Footer(First Line)</label>
+                          <input type="text" class="form-control  m-auto text-info"  formControlName="CardFooter1">
+                          <small class="text-danger" *ngIf="CardForm1.get('CardFooter1').invalid && CardForm1.get('CardFooter1').touched">
+                            This field is required!
+                          </small>
+                        </div>
+                        <div class="form-group">
+                          <label class="h6">*Card Footer(Second Line)</label>
+                          <input type="text" class="form-control m-auto text-info"  formControlName="CardFooter2">
+                          <small class="text-danger" *ngIf="CardForm1.get('CardFooter2').invalid && CardForm1.get('CardFooter2').touched">
+                            This field is required!
+                          </small>
+                        </div>
+                        <div class="form-group">
+                          <label class="h6">*Card Footer(Third Line)</label>
+                          <input type="text" class="form-control  m-auto text-info"  formControlName="CardFooter3">
+                          <small class="text-danger" *ngIf="CardForm1.get('CardFooter3').invalid && CardForm1.get('CardFooter3').touched">
+                            This field is required!
+                          </small>
+                        </div>
+        
+                        <button class="btn btn-info submit" [disabled]="CardForm1.invalid">Save Changes</button>
+                      </form>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-xl-4 col-md-6 my-4">
+                <div class="card">
+                  <div class="card-body p-4">
+                    <div class="icon-main">
+                      <i class="fab fa-connectdevelop"></i>
+                    </div>
+                    <form [formGroup]="CardForm2" (ngSubmit)="SetSection(CardForm2,'4-Card2')">
+                      <div class="form-group">
+                        <label class="h5">*Card Title</label>
+                        <input type="text" class="form-control w-75 text-info"  formControlName="CardTitle">
+                        <small class="text-danger" *ngIf="CardForm2.get('CardTitle').invalid && CardForm2.get('CardTitle').touched">
+                          This field is required!
+                        </small>
+                      </div>
+        
+                      <div class="form-group">
+                        <label class="h6">*Card Details</label>
+                        <textarea  formControlName="CardDetails" cols="30" rows="10" class="text-info form-control"></textarea>
+                        <small class="text-danger" *ngIf="CardForm2.get('CardDetails').invalid && CardForm2.get('CardDetails').touched">
+                          This field is required!
+                        </small>
+                      </div>
+      
+                      <div class="form-group">
+                        <label class="h6">*Card Footer(First Line)</label>
+                        <input type="text" class="form-control  m-auto text-info"  formControlName="CardFooter1">
+                        <small class="text-danger" *ngIf="CardForm2.get('CardFooter1').invalid && CardForm2.get('CardFooter1').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                      <div class="form-group">
+                        <label class="h6">*Card Footer(Second Line)</label>
+                        <input type="text" class="form-control m-auto text-info"  formControlName="CardFooter2">
+                        <small class="text-danger" *ngIf="CardForm2.get('CardFooter2').invalid && CardForm2.get('CardFooter2').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                      <div class="form-group">
+                        <label class="h6">*Card Footer(Third Line)</label>
+                        <input type="text" class="form-control  m-auto text-info"  formControlName="CardFooter3">
+                        <small class="text-danger" *ngIf="CardForm2.get('CardFooter3').invalid && CardForm2.get('CardFooter3').touched">
+                          This field is required!
+                        </small>
+                      </div>
+      
+                      <button class="btn btn-info submit" [disabled]="CardForm2.invalid">Save Changes</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-xl-4 col-lg-12 my-4">
+                <div class="card">
+                  <div class="card-body p-4">
+                    <div class="icon-main">
+                      <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <form [formGroup]="CardForm3" (ngSubmit)="SetSection(CardForm3,'4-Card3')">
+                      <div class="form-group">
+                        <label class="h5">*Card Title</label>
+                        <input type="text" class="form-control w-75 text-info"  formControlName="CardTitle">
+                        <small class="text-danger" *ngIf="CardForm3.get('CardTitle').invalid && CardForm3.get('CardTitle').touched">
+                          This field is required!
+                        </small>
+                      </div>
+        
+                      <div class="form-group">
+                        <label class="h6">*Card Details</label>
+                        <textarea  formControlName="CardDetails" cols="30" rows="10" class="text-info form-control"></textarea>
+                        <small class="text-danger" *ngIf="CardForm3.get('CardDetails').invalid && CardForm3.get('CardDetails').touched">
+                          This field is required!
+                        </small>
+                      </div>
+      
+                      <div class="form-group">
+                        <label class="h6">*Card Footer(First Line)</label>
+                        <input type="text" class="form-control  m-auto text-info"  formControlName="CardFooter1">
+                        <small class="text-danger" *ngIf="CardForm3.get('CardFooter1').invalid && CardForm3.get('CardFooter1').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                      <div class="form-group">
+                        <label class="h6">*Card Footer(Second Line)</label>
+                        <input type="text" class="form-control m-auto text-info"  formControlName="CardFooter2">
+                        <small class="text-danger" *ngIf="CardForm3.get('CardFooter2').invalid && CardForm3.get('CardFooter2').touched">
+                          This field is required!
+                        </small>
+                      </div>
+                      <div class="form-group">
+                        <label class="h6">*Card Footer(Third Line)</label>
+                        <input type="text" class="form-control  m-auto text-info"  formControlName="CardFooter3">
+                        <small class="text-danger" *ngIf="CardForm3.get('CardFooter3').invalid && CardForm3.get('CardFooter3').touched">
+                          This field is required!
+                        </small>
+                      </div>
+      
+                      <button class="btn btn-info submit" [disabled]="CardForm3.invalid">Save Changes</button>
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+  
+      <section id="section5" class="py-5">
+        <div class="container py-5">
+          <div class="head text-center">
+            <form [formGroup]="Section5" (ngSubmit)="SetSection(Section5,'5')">
+              <div class="form-group">
+                <label class="h5">*Small Title</label>
+                <input type="text" class="form-control w-50 m-auto text-info" formControlName="SmallTitle">
+                <small class="text-danger" *ngIf="Section5.get('SmallTitle').invalid && Section5.get('SmallTitle').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h2">*Big Title(First Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle1">
+                <small class="text-danger" *ngIf="Section5.get('BigTitle1').invalid && Section5.get('BigTitle1').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h4">*Big Title(Second Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle2">
+                <small class="text-danger" *ngIf="Section5.get('BigTitle2').invalid && Section5.get('BigTitle2').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h4">*Details</label>
+                <textarea  rows="4" class="text-info form-control w-75 m-auto" formControlName="Details"></textarea>
+                <small class="text-danger" *ngIf="Section5.get('Details').invalid && Section5.get('Details').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <button class="btn btn-info submit" [disabled]="Section5.invalid">Save Changes</button>
+            </form>
+          </div>
+          <div class="body mt-5">
+            <div class="row teamMembers">
+              <div class="col-lg-3 col-md-6 p-0 my-2">
+                <div class="team-profile">
+                  <img src="../../../assets/Pages/Home/section6/member1.jpg" alt="Team Member1" class="img-fluid">
+                  <div class="team-contact d-flex flex-column">
+                      <a rel="nofollow" href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                      <a rel="nofollow" href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                      <a rel="nofollow" href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a rel="nofollow" href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="team-info text-center my-4">
+                  <h4>David Ferry</h4>
+                  <span>Co-Founder of company</span>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-0 my-2">
+                <div class="team-profile">
+                  <img src="../../../assets/Pages/Home/section6/member2.jpg" alt="Team Member1" class="img-fluid">
+                  <div class="team-contact d-flex flex-column">
+                      <a rel="nofollow" href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                      <a rel="nofollow" href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                      <a rel="nofollow" href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a rel="nofollow" href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="team-info text-center my-4">
+                  <h4>Christina Torres</h4>
+                  <span>Co-Founder of company</span>
+
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-0 my-2">
+                <div class="team-profile">
+                  <img src="../../../assets/Pages/Home/section6/member3.jpg" alt="Team Member1" class="img-fluid">
+                  <div class="team-contact d-flex flex-column">
+                      <a rel="nofollow" href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                      <a rel="nofollow" href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                      <a rel="nofollow" href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a rel="nofollow" href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="team-info text-center my-4">
+                  <h4>Amalia Bruno</h4>
+                  <span>CTO of company</span>
+                  
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 p-0 my-2">
+                <div class="team-profile">
+                  <img src="../../../assets/Pages/Home/section6/member4.jpg" alt="Team Member1" class="img-fluid">
+                  <div class="team-contact d-flex flex-column">
+                      <a rel="nofollow" href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                      <a rel="nofollow" href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                      <a rel="nofollow" href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a rel="nofollow" href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="team-info text-center my-4">
+                  <h4>Robert Cooper</h4>
+                  <span>CEO of company</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="section6" class="py-5">
+        <div class="container py-5">
+          <div class="d-flex justify-content-center align-items-center flex-column text-white pt-5 text-center">
+            <form class="w-100" [formGroup]="Section6" (ngSubmit)="SetSection(Section6,'6')">
+              <div class="form-group">
+                <label class="h5">*Small Title</label>
+                <input type="text" class="form-control w-50  m-auto text-info" formControlName="SmallTitle">
+                <small class="text-danger" *ngIf="Section6.get('SmallTitle').invalid && Section6.get('SmallTitle').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h2">*Big Title(First Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle1">
+                <small class="text-danger" *ngIf="Section6.get('BigTitle1').invalid && Section6.get('BigTitle1').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h4">*Big Title(Second Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle2">
+                <small class="text-danger" *ngIf="Section6.get('BigTitle2').invalid && Section6.get('BigTitle2').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <button class="btn btn-info submit" [disabled]="Section6.invalid">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </section>
+  
+      <section id="section7" class="py-5">
+        <div class="container py-5 text-center">
+          <div class="head">
+
+            <form class="w-100" [formGroup]="Section7" (ngSubmit)="SetSection(Section7,'7')">
+              <div class="form-group">
+                <label class="h5">*Small Title</label>
+                <input type="text" class="form-control w-50  m-auto text-info" formControlName="SmallTitle">
+                <small class="text-danger" *ngIf="Section7.get('SmallTitle').invalid && Section7.get('SmallTitle').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h2">*Big Title(First Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle1">
+                <small class="text-danger" *ngIf="Section7.get('BigTitle1').invalid && Section7.get('BigTitle1').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <div class="form-group">
+                <label class="h4">*Big Title(Second Line)</label>
+                <input type="text" class="form-control w-75 m-auto text-info" formControlName="BigTitle2">
+                <small class="text-danger" *ngIf="Section7.get('BigTitle2').invalid && Section7.get('BigTitle2').touched">
+                  This field is required!
+                </small>
+              </div>
+
+              <button class="btn btn-info submit" [disabled]="Section7.invalid">Save Changes</button>
+            </form>
+          </div>
+           <div class="body mt-5">
+            <div class="d-flex flex-wrap justify-content-center" id="owl2">
+              <div class="item mx-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row mb-4">
+                      <div class="col-lg-3 col-md-2 col-3">
+                        <img src="../../../assets/Pages/Home/section8/testi1.png" alt="Emilia Clarke" class="img-fluid">
+                      </div>
+                      <div class="col-8 d-flex justify-content-start align-items-center text-left">
+                        <div class="title w-100">
+                          <form class="w-100" [formGroup]="SliderForm1" (ngSubmit)="SetSection(SliderForm1,'7-Slider1')">
+                            <div class="form-group">
+                              <label class="h6">*Slider Small Title</label>
+                              <input type="text" class="form-control m-auto text-info" formControlName="BigTitle">
+                              <small class="text-danger" *ngIf="SliderForm1.get('BigTitle').invalid && SliderForm1.get('BigTitle').touched">
+                                This field is required!
+                              </small>
+                            </div>
+              
+                            <div class="form-group">
+                              <label class="h3">*Slider Big Title</label>
+                              <input type="text" class="form-control  m-auto text-info" formControlName="SmallTitle">
+                              <small class="text-danger" *ngIf="SliderForm1.get('SmallTitle').invalid && SliderForm1.get('SmallTitle').touched">
+                                This field is required!
+                              </small>
+                            </div>
+              
+                            <div class="form-group">
+                              <label class="h4">*Slider Details</label>
+                              <textarea formControlName="Details" cols="30" rows="10" class="text-info form-control"></textarea>
+                              <small class="text-danger" *ngIf="SliderForm1.get('Details').invalid && SliderForm1.get('Details').touched">
+                                This field is required!
+                              </small>
+                            </div>
+                            
+                            <button class="btn btn-info submit" [disabled]="SliderForm1.invalid">Save Changes</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="item mx-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row mb-4">
+                      <div class="col-lg-3 col-md-2 col-3">
+                        <img src="../../../assets/Pages/Home/section8/testi2.png" alt="Emilia Clarke" class="img-fluid">
+                      </div>
+                      <div class="col-8 d-flex justify-content-start align-items-center text-left">
+                        <div class="title w-100">
+                          <form class="w-100" [formGroup]="SliderForm2" (ngSubmit)="SetSection(SliderForm2,'7-Slider2')">
+                            <div class="form-group">
+                              <label class="h6">*Slider Small Title</label>
+                              <input type="text" class="form-control m-auto text-info" formControlName="BigTitle">
+                              <small class="text-danger" *ngIf="SliderForm2.get('BigTitle').invalid && SliderForm2.get('BigTitle').touched">
+                                This field is required!
+                              </small>
+                            </div>
+              
+                            <div class="form-group">
+                              <label class="h3">*Slider Big Title</label>
+                              <input type="text" class="form-control  m-auto text-info" formControlName="SmallTitle">
+                              <small class="text-danger" *ngIf="SliderForm2.get('SmallTitle').invalid && SliderForm2.get('SmallTitle').touched">
+                                This field is required!
+                              </small>
+                            </div>
+              
+                            <div class="form-group">
+                              <label class="h4">*Slider Details</label>
+                              <textarea formControlName="Details" cols="30" rows="10" class="text-info form-control"></textarea>
+                              <small class="text-danger" *ngIf="SliderForm2.get('Details').invalid && SliderForm2.get('Details').touched">
+                                This field is required!
+                              </small>
+                            </div>
+                            
+                            <button class="btn btn-info submit" [disabled]="SliderForm2.invalid">Save Changes</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
+    </main>
+

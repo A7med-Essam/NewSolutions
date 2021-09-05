@@ -1,0 +1,164 @@
+    <main id="contacts">
+      <header>
+        <section id="section-home">
+          <div class="container p-0">
+            <div class="content d-flex justify-content-between align-items-center">
+              <h1 class="page-title text-white">Contacts</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                  <li class="breadcrumb-item"><a routerLink="/dashboard" class="text-reset">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Contacts</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </header>
+  
+      <section id="section1" class="py-5">
+        <div class="container px-0 py-5">
+          <div class="row m-0">
+            <div class="col-lg-6 contact-info">
+              <form [formGroup]="Section1" (ngSubmit)="SetSection(Section1,'1')">
+                <div class="form-group">
+                  <label class="h5">*Small Title</label>
+                  <input type="text" class="form-control  m-auto text-info" formControlName="SmallTitle">
+                  <small class="text-danger" *ngIf="Section1.get('SmallTitle').invalid && Section1.get('SmallTitle').touched">
+                    This field is required!
+                  </small>
+                </div>
+  
+                <div class="form-group">
+                  <label class="h2">*Big Title(First Line)</label>
+                  <input type="text" class="form-control  m-auto text-info" formControlName="BigTitle1">
+                  <small class="text-danger" *ngIf="Section1.get('BigTitle1').invalid && Section1.get('BigTitle1').touched">
+                    This field is required!
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label class="h4">*Big Title(Second Line)</label>
+                  <input type="text" class="form-control  m-auto text-info" formControlName="BigTitle2">
+                  <small class="text-danger" *ngIf="Section1.get('BigTitle2').invalid && Section1.get('BigTitle2').touched">
+                    This field is required!
+                  </small>
+                </div>
+                
+                <div class="form-group">
+                  <label class="h4">*Details</label>
+                  <textarea rows="3" class="text-info form-control" formControlName="Details"></textarea>
+                  <small class="text-danger" *ngIf="Section1.get('Details').invalid && Section1.get('Details').touched">
+                    This field is required!
+                  </small>
+                </div>
+ 
+              <div class="contact-icons d-flex align-items-center p-4">
+                <i class="fas fa-map-marker-alt fa-2x mr-4 mb-2 text-main3"></i>
+                <div class="info-text w-100">
+                  <h6>Our Address:</h6>
+                  <input type="text" class="form-control my-2" placeholder="Address" formControlName="Address">
+                  <small class="text-danger" *ngIf="Section1.get('Address').invalid && Section1.get('Address').touched">
+                    This field is required!
+                  </small>
+                </div>
+              </div>
+              <div class="contact-icons d-flex align-items-center p-4">
+                <i class="far fa-envelope fa-2x mr-4 mb-2 text-main3"></i>
+                <div class="info-text w-100">
+                  <h6>Our Mailbox:</h6>
+                  <input type="email" class="form-control my-2" placeholder="Email" formControlName="Email">
+                  <small class="text-danger" *ngIf="Section1.get('Email').invalid && Section1.get('Email').touched">
+                    This field is required!
+                  </small>
+                </div>
+              </div>
+              <div class="contact-icons d-flex align-items-center p-4">
+                <i class="fas fa-phone fa-2x mr-4 mb-2 text-main3"></i>
+                <div class="info-text w-100">
+                  <h6>Our Phone:</h6>
+                  <input type="text" class="form-control my-2" placeholder="Phone" formControlName="Phone">
+                  <small class="text-danger" *ngIf="Section1.get('Phone').invalid && Section1.get('Phone').touched">
+                    This field is required!
+                  </small>
+                </div>
+              </div>
+              <button class="btn btn-info submit mb-3" [disabled]="Section1.invalid">Save Changes</button>
+            </form>
+
+            </div>
+            <div class="col-lg-6 user-contact-form">
+              <div class="contact-form">
+                <!-- <form [formGroup]="userContactForm" (ngSubmit)="getContactForm(userContactForm)"> -->
+                  <h2>Ready to Get Started?</h2>
+                  <small><span>Your email address will not be published. Required fields are marked *</span></small>
+                  <div class="form-group mt-5">
+                    <input type="text" class="contact-form-control" placeholder="Your Name *" >
+                    <!-- <small class="text-danger" *ngIf="userContactForm.get('UserName').invalid && userContactForm.get('UserName').touched">
+                      This field is required!
+                    </small> -->
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="contact-form-control" placeholder="Your Email *" >
+                    <!-- <small class="text-danger" *ngIf="userContactForm.get('Email').invalid && userContactForm.get('Email').touched">
+                      This field is required!
+                    </small> -->
+                  </div>
+                  <div class="form-group">
+                    <textarea class="contact-form-control" cols="30" rows="8" placeholder="Message..." ></textarea>
+                    <!-- <small class="text-danger" *ngIf="userContactForm.get('Message').invalid && userContactForm.get('Message').touched">
+                      This field is required!
+                    </small> -->
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" disabled="true" class="btn btn-info submit contact-btn">SEND MESSAGE</button>
+                  </div>
+                <!-- </form> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="SocialMedia">
+        <div class="container bg-main mb-4 pt-3 rounded">
+          <h2 class="text-white text-center" >New Solutions Social Media</h2>
+          <form [formGroup]="SocialMedia" (ngSubmit)="SetSection(SocialMedia,'2')">
+            <div class="form-group">
+              <label class="h5 text-white">*Twitter Url</label>
+              <input type="text" class="form-control m-auto text-info" formControlName="TwitterUrl">
+              <small class="text-danger" *ngIf="SocialMedia.get('TwitterUrl').invalid && SocialMedia.get('TwitterUrl').touched">
+                This field is required!
+              </small>
+            </div>
+    
+            <div class="form-group">
+              <label class="h5 text-white">*Facebook Url</label>
+              <input type="text" class="form-control m-auto text-info" formControlName="FacebookUrl">
+              <small class="text-danger" *ngIf="SocialMedia.get('FacebookUrl').invalid && SocialMedia.get('FacebookUrl').touched">
+                This field is required!
+              </small>
+            </div>
+            
+            <div class="form-group">
+              <label class="h5 text-white">*LinkedIn Url</label>
+              <input type="text" class="form-control m-auto text-info" formControlName="LinkedInUrl">
+              <small class="text-danger" *ngIf="SocialMedia.get('LinkedInUrl').invalid && SocialMedia.get('LinkedInUrl').touched">
+                This field is required!
+              </small>
+            </div>
+    
+            <div class="form-group">
+              <label class="h5 text-white">*Instegram Url</label>
+              <input type="text" class="form-control m-auto text-info" formControlName="InstegramUrl">
+              <small class="text-danger" *ngIf="SocialMedia.get('InstegramUrl').invalid && SocialMedia.get('InstegramUrl').touched">
+                This field is required!
+              </small>
+            </div>
+  
+            <button class="btn btn-info submit mb-3" [disabled]="SocialMedia.invalid">Save Changes</button>
+          </form>
+        </div>
+      </section>
+    </main>
+

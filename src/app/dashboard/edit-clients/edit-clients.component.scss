@@ -1,0 +1,192 @@
+/* 2nd section */
+#clients #section2{
+    overflow: hidden;
+}
+#clients #section2 .header-content h2{
+    line-height: 48px;
+    font-size: 36px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+    color: #1b1d21;
+}
+
+#clients #section2 .header-content span{
+    font-size: 14px;
+    font-weight: 700;
+    color: #7141b1;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+#clients #section2 .body .team-info h4{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+#clients #section2 .body .team-info span {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #797979;
+}
+
+#clients #section2 .body .teamMembers div{
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+#clients #section2 .body .teamMembers > div:hover{
+    box-shadow: 0px 8px 25px rgba(0,0,0,.3);
+}
+
+#clients #section2 .body .teamMembers .team-profile{
+    position: relative;
+    overflow: hidden;
+}
+
+#clients #section2 .body .teamMembers .team-profile .team-contact{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 3px 17px;
+    background-color: #262051;
+    transform: translate(100%,-50%);
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+
+#clients #section2 .body .teamMembers .team-profile .team-contact a{
+    display: block;
+    color: #9390a8;
+    font-size: 14px;
+    line-height: 1;
+    margin: 20px 0;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+
+#clients #section2 .body .teamMembers > div:hover .team-profile .team-contact{
+    transform: translate(0%,-50%);
+} 
+
+#clients #section2 .body .teamMembers .team-profile .team-contact a:hover{
+    color: #43BAFF;
+}
+
+#clients #section3 button{
+    transition: all 0.5s ease-in-out;
+}
+
+#clients #section3 button:hover{
+    background-color: #7141b1;
+}
+// custom input
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.inputfile-2 + label {
+    color: #43BAFF;
+    border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+    color: #43BAFF;
+}
+
+
+/* media query */
+@media all and (max-width:600px){
+    #clients  #section2 .header-content h2{
+        line-height: 38px;
+        font-size: 26px;
+    }
+}
+
+/* =============================================================================================== */
+/* section3 */
+#clients #section3 .container{
+    background-image: url("../../../assets/Pages/OurClients/section3/bg-cta1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#clients #section3 .title h2{
+    line-height: 48px;
+    font-size: 36px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+}
+
+#clients #section3 .title span{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#clients #section3 button{
+    font-family: "Nunito Sans",Sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #43BAFF;
+    border-radius: 0 0 0 0;
+    padding: 16px 35px 16px 35px;
+    color: #fff;
+}
+
+@media all and (max-width:991px){
+    #clients #section3 .container{
+        justify-content: center !important;
+    }
+    #clients #section3 button{
+        margin: 0 !important;
+    }
+}
+
+@media all and (max-width:767px){
+    #clients #section3 .container{
+        text-align: center;
+    }
+    #clients #section3 .title h2{
+        font-size: 30px;
+    }
+
+    #clients #section3 .title{
+        margin-left: 0px !important;
+    }
+}

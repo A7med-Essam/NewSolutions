@@ -1,0 +1,13 @@
+main strong{
+        font-size: 20px;
+    }
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+#ClientTable tbody tr:first-child td.Social-Media-Links, #EmployeeTable tbody tr:first-child td.Social-Media-Links{
+    word-break: break-all;
+}
+
+

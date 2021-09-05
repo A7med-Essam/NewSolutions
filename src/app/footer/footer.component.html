@@ -1,0 +1,68 @@
+<footer class="py-5">
+    <div class="container py-5">
+      <div class="footer-head text-center">
+        <img src="../../assets/Pages/logo.PNG" style="width: 50px;" />
+      </div>
+      <div class="footer-body text-center my-5 text-white">
+        <div class="row">
+          <div class="col-md-4 my-4">
+            <div class="address-info">
+              <div class="mb-3">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p>
+                <!-- {{contactInfo?.address?contactInfo?.address:"411 University St, Seattle, USA"}} -->
+                {{contactInfo?.Address}}
+                {{contactInfo?.address}}
+              </p>
+              <h6>Our Address</h6>
+            </div>
+          </div>
+
+          <div class="col-md-4 my-4">
+            <div class="email-info">
+              <div class="mb-3">
+                <i class="far fa-envelope"></i>
+              </div>
+              <p>
+                <!-- {{contactInfo?.email?contactInfo?.email:"engitech@oceanthemes.net"}} -->
+                {{contactInfo?.email}}
+                {{contactInfo?.Email}}
+              </p>
+              <h6>Our Mailbox</h6>			        				        
+            </div>
+          </div>
+
+          <div class="col-md-4 my-4">
+            <div class="phone-info">
+              <div class="mb-3">
+                <i class="fas fa-phone"></i>
+              </div>
+              <p>
+                <!-- {{contactInfo?.phone?contactInfo?.phone:"+1 -800-456-478-23"}} -->
+                {{contactInfo?.phone}}
+                {{contactInfo?.Phone}}
+              </p>
+              <h6>Our Phone</h6>			        				        
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer text-white text-center">
+        <ul class="d-flex list-unstyled justify-content-center my-4 flex-wrap">
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about-us">About</a></li>
+          <li><a routerLink="/our-clients">Clients</a></li>
+          <li><a routerLink="/our-projects">Projects</a></li>
+          <li><a routerLink="/contact-us">Contacts</a></li>
+        </ul>
+        <p>Copyright © 2021 New System Solutions, All Rights Reserved.</p>
+        <div class="contact-icons">
+          <a target="_blank" href="{{SocialMedia?.twitterUrl}}{{SocialMedia?.TwitterUrl}}"  class="text-reset text-decoration-none"> <i class="fab fa-twitter"></i> </a>
+          <a target="_blank" href="{{SocialMedia?.facebookUrl}}{{SocialMedia?.FacebookUrl}}"  class="text-reset text-decoration-none"> <i class="fab fa-facebook-f"></i> </a>
+          <a target="_blank" href="{{SocialMedia?.linkedInUrl}}{{SocialMedia?.LinkedInUrl}}"  class="text-reset text-decoration-none"> <i class="fab fa-linkedin-in"></i> </a>
+          <a target="_blank" href="{{SocialMedia?.instegramUrl}}{{SocialMedia?.InstegramUrl}}" class="text-reset text-decoration-none"> <i class="fab fa-instagram"></i> </a>
+        </div>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,124 @@
+/* 2nd section */
+#projects #section1{
+    overflow: hidden;
+}
+#projects #section1 .header-content h2{
+    line-height: 48px;
+    font-size: 36px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+    color: #1b1d21;
+}
+
+#projects #section1 .header-content span{
+    font-size: 14px;
+    font-weight: 700;
+    color: #7141b1;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+#projects #section1 #pills-tab li a.active{
+    background-color: #7147C2 !important;
+}
+
+#projects #section1 #pills-tabContent .content{
+    position:relative;
+    color:#fff;
+    text-align:left;
+    overflow:hidden;
+
+}
+
+#projects #section1 #pills-tabContent .content .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(12,41,53,.5);
+    // opacity: 0;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+#projects #section1 #pills-tabContent .content .overlay h3 , #projects #section1 #pills-tabContent .content .overlay span{
+    padding-left: 40px;
+}
+
+
+#projects #section1 #pills-tabContent .content:hover .overlay{
+    opacity: 1;
+}
+
+#projects #section1 #pills-tab a.nav-link{
+    color: #000 !important;
+    font-weight:600;
+}
+
+#projects #section1 #pills-tab a.active{
+    color: #fff !important;
+}
+
+#projects #section1 #pills-tabContent .content img{
+        transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+}
+
+#projects #section1 #pills-tabContent .content:hover img{
+    transform:scale(1.05);
+}
+
+//  custom input
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.inputfile-2 + label {
+    color: #43BAFF;
+    border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+    color: #43BAFF;
+}

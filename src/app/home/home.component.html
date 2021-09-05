@@ -1,0 +1,387 @@
+    <header>
+    <!-- Home Section -->
+      <section id="header-section">
+        <div class="vh-100 d-flex justify-content-center align-items-center py-5">
+          <div class="text-white text-center container">
+            <p>{{section1?.smallTitle}}</p> 
+            <h1>
+              {{section1?.bigTitle1}}
+                <br>
+              <span class="h2">{{section1?.bigTitle2}}</span>
+            </h1>
+            <div class="row home-icons justify-content-center mt-4">
+              <div class="col-auto">
+                <i class="fas fa-database fa-2x"></i>
+                <h5 class="mt-3">Data Analytics</h5>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-globe fa-2x"></i>
+                <h5 class="mt-3">web development</h5>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-paint-brush fa-2x"></i>
+                <h5 class="mt-3">UI/UX Design</h5>
+              </div>
+              <div class="col-auto">
+                <i class="far fa-file-alt fa-2x"></i>
+                <h5 class="mt-3">QA & Testing</h5>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-users fa-2x"></i>
+                <h5 class="mt-3">dedicated team</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section id="section2" class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <p class="text-main2 font-weight-bold">{{section2?.smallTitle}}</p>
+          <h2>  
+            {{section2?.bigTitle1}}
+            <br>
+            <span class="h3">{{section2?.bigTitle2}}</span>
+          </h2>
+        </div>
+        <img src="../../assets/Pages/Home/section2/section2.png" alt="company background" class="img-fluid">
+
+        <div class="row mt-5">
+          <div class="col-lg-4 mt-5">
+            <div class="content border position-relative py-4 pointer">
+                  <span class="big-number">01</span>
+                  <div class="d-flex">
+                    <div class="content-icon mx-4">
+                      <i class="fas fa-check-circle text-main2 mt-1" style="font-size: 40px;"></i>
+                    </div>
+                    <div class="content-box">
+                        <h5>Machine Learning</h5>
+                        <p class="m-0">Support and Evolution</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-5">
+            <div class="content border position-relative py-4 pointer">
+                  <span class="big-number">02</span>
+                  <div class="d-flex">
+                    <div class="content-icon mx-4">
+                      <i class="fas fa-check-circle text-main3 mt-1" style="font-size: 40px;"></i>
+                    </div>
+                    <div class="content-box">
+                        <h5>Artificial Intelligence</h5>
+                        <p class="m-0">Support and Evolution</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-5">
+            <div class="content border position-relative py-4 pointer">
+                  <span class="big-number">03</span>
+                  <div class="d-flex">
+                    <div class="content-icon mx-4">
+                      <i class="fas fa-check-circle text-main mt-1" style="font-size: 40px;"></i>
+                    </div>
+                    <div class="content-box">
+                        <h5>Augmented Reality</h5>
+                        <p class="m-0">Support and Evolution</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <section id="section3" class="py-5">
+      <div class="container-md px-0 py-5">
+        <div class="row mx-0">
+          <div class="col-lg-6 d-flex align-items-center">
+            <div>
+              <div class="content text-white">
+                <span>{{section3?.smallTitle}}</span>
+                <h2 class="main-heading font-weight-bold fa-3x">
+                    {{section3?.bigTitle1}}
+                  <br>
+                    {{section3?.bigTitle2}}
+                </h2>
+                <p class="mr-5 mt-4" style="line-height: 1.875;">
+                  {{section3?.details}}
+                  </p>
+              </div>
+              <div id="counter" class="d-flex mt-5 text-white justify-content-between mr-5">
+                <div class="mx-2">
+                  <span class="numscroller" [attr.data-max]="section3?.activeClients?section3?.activeClients:35"  data-min="0" data-increment="1" data-delay="1"></span>
+                  <span>+</span>
+                  <h5>Active Clients</h5>
+                </div>
+                <div class="mx-2">
+                  <span class="numscroller" [attr.data-max]="section3?.projectsDone?section3?.projectsDone:46" data-min="0" data-increment="1" data-delay="1"></span>
+                  <span>+</span>
+                  <h5>Projects Done</h5>
+                </div>
+                <div class="mx-2">
+                  <span class="numscroller" [attr.data-max]="section3?.teamAdvisors?section3?.teamAdvisors:9" data-min="0" data-increment="1" data-delay="1"></span>
+                  <span>+</span>
+                  <h5>Team Advisors</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="position-relative pointer">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <div class="ribbon"></div>
+                    <h4>Our Mission</h4>
+                  </div>
+                  <img src="../../assets/Pages/Home/section3/image-box1.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-6 mt-lg-4">
+                <div class="position-relative pointer">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <div class="ribbon"></div>
+                    <h4>Our Mission</h4>
+                  </div>
+                  <img src="../../assets/Pages/Home/section3/image-box2.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="position-relative pointer">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <div class="ribbon"></div>
+                    <h4>Our Mission</h4>
+                  </div>
+                  <img src="../../assets/Pages/Home/section3/image-box3.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-sm-6 mt-lg-4">
+                <div class="position-relative pointer">
+                  <div class="overlay d-flex justify-content-center align-items-center">
+                    <div class="ribbon"></div>
+                    <h4>Our Mission</h4>
+                  </div>
+                  <img src="../../assets/Pages/Home/section3/image-box4.jpg" alt="TECHNOLOGY INDEX" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section4">
+      <div class="container py-5">
+        <div class="owl-carousel" id="owl1">
+          <div class="item">
+            <img src="../../assets/Pages/Home/section4/client1.svg" alt="Client logo" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="../../assets/Pages/Home/section4/client2.svg" alt="Client logo" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="../../assets/Pages/Home/section4/client3.svg" alt="Client logo" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="../../assets/Pages/Home/section4/client4.png" alt="Client logo" class="img-fluid" style="width: 100px;">
+          </div>
+          <div class="item">
+            <img src="../../assets/Pages/Home/section4/client5.svg" alt="Client logo" class="img-fluid">
+          </div>
+          <div class="item">
+            <img src="../../assets/Pages/Home/section4/client6.svg" alt="Client logo" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <section id="section5" class="py-5">
+      <div class="container py-5">
+        <div class="head text-center">
+          <span>{{section4?.smallTitle}}</span>
+          <h2>
+            {{section4?.bigTitle1}}
+            <br>
+            <div class="h3">{{section4?.bigTitle2}}</div>
+          </h2>
+        </div>
+        <div class="body mt-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-6 my-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <div class="icon-main">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <h5 class="card-title w-75">{{section4Card1?.cardTitle}}</h5>
+                  <p class="card-text text-muted" style="width: 90%;">
+                    {{section4Card1?.cardDetails}}
+                  </p>
+                    <ul class="list-unstyled">
+                      <li class="active"><a href="#">{{section4Card1?.cardFooter1}}</a></li>
+                      <li><a href="#">{{section4Card1?.cardFooter2}}</a></li>
+                      <li><a href="#">{{section4Card1?.cardFooter3}}</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 my-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <div class="icon-main">
+                    <i class="fab fa-connectdevelop"></i>
+                  </div>
+                  <h5 class="card-title w-75">{{section4Card2?.cardTitle}}</h5>
+                  <p class="card-text text-muted" style="width: 90%;">
+                    {{section4Card2?.cardDetails}}
+                  </p>
+                    <ul class="list-unstyled">
+                      <li><a href="#">{{section4Card2?.cardFooter1}}</a></li>
+                      <li class="active"><a href="#">{{section4Card2?.cardFooter2}}</a></li>
+                      <li><a href="#">{{section4Card2?.cardFooter3}}</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-12 my-4">
+              <div class="card">
+                <div class="card-body p-4">
+                  <div class="icon-main">
+                    <i class="fas fa-project-diagram"></i>
+                  </div>
+                  <h5 class="card-title w-75">{{section4Card3?.cardTitle}}</h5>
+                  <p class="card-text text-muted" style="width: 90%;">
+                    {{section4Card3?.cardDetails}}
+                  </p>
+                    <ul class="list-unstyled">
+                      <li><a href="#">{{section4Card3?.cardFooter1}}</a></li>
+                      <li><a href="#">{{section4Card3?.cardFooter2}}</a></li>
+                      <li class="active"><a href="#">{{section4Card3?.cardFooter3}}</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <section id="section6" class="py-5">
+      <div class="container py-5">
+        <div class="head text-center">
+          <span>{{section5?.smallTitle}}</span>
+          <h2>
+            {{section5?.bigTitle1}}
+            <br>
+              <div class="h3 font-weight-bold">{{section5?.bigTitle2}}</div>
+            </h2>
+          <p class="text-muted mt-4">
+            {{section5?.details}}
+          </p>
+        </div>
+        <div class="body mt-5">
+          <div class="row teamMembers">
+            <div class="col-lg-3 col-md-6 p-0 my-2" *ngFor="let item of EmployeesInfo">
+              <div class="team-profile">
+                <img [src]="item?.imageUrl"
+                  alt="Team Member1" class="img-fluid w-100" style="height:350px;">
+                <div class="team-contact d-flex flex-column">
+                    <a rel="nofollow" href="{{item?.twitterUrl}}"    class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a rel="nofollow" href="{{item?.linkedInUrl}}"   class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a rel="nofollow" href="{{item?.facebookUrl}}"   class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a rel="nofollow" href="{{item?.instegramUrl}}"  class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+              <div class="team-info text-center my-4">
+                <h4>{{item?.name}}</h4>
+                <span>{{item?.jobTitle}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section7" class="py-5">
+      <div class="container py-5">
+        <div class="d-flex justify-content-center align-items-center flex-column text-white pt-5 text-center">
+          <p>{{section6?.smallTitle}} </p>
+          <h2>
+              {{section6?.bigTitle1}}
+            <br>
+              {{section6?.bigTitle2}}
+            </h2>
+            <button class="mt-5">
+            <a routerLink="/contact-us" class="text-white text-decoration-none">Contact Us</a>
+            </button>
+        </div>
+      </div>
+    </section> 
+
+    <section id="section8" class="py-5">
+      <div class="container py-5 text-center">
+        <div class="head">
+          <span>{{section7?.smallTitle}}</span>
+          <h2>
+              {{section7?.bigTitle1}}
+            <br>
+              <div class="h3">{{section7?.bigTitle2}}</div>
+          </h2>	    
+        </div>
+        <div class="body mt-5">
+          <div class="owl-carousel" id="owl2">
+              <div class="item mx-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row mb-4">
+                      <div class="col-lg-3 col-md-2 col-3">
+                        <img src="../../assets/Pages/Home/section8/testi2.png" alt="Slider_Image" class="img-fluid">
+                      </div>
+                      <div class="col-8 d-flex justify-content-start align-items-center text-left">
+                        <div class="title">
+                          <h6>{{section7Slider1?.bigTitle}}</h6>
+                          <span>{{section7Slider1?.smallTitle}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-muted body-content">	
+                        {{section7Slider1?.details}}				        
+                    </p>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item mx-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row mb-4">
+                      <div class="col-lg-3 col-md-2 col-3">
+                        <img src="../../assets/Pages/Home/section8/testi1.png" alt="Slider_Image" class="img-fluid">
+                      </div>
+                      <div class="col-8 d-flex justify-content-start align-items-center text-left">
+                        <div class="title">
+                          <h6>{{section7Slider2?.bigTitle}}</h6>
+                          <span>{{section7Slider2?.smallTitle}}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-muted body-content">	
+                      {{section7Slider2?.details}}	        
+                    </p>
+                    <div class="layer"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,159 @@
+<div class="d-none" id="bodyOverlay"></div>
+<!-- Overlay Search -->
+<div class="overlay-search">
+    <div class="container">
+      <div class="row">
+        <div class="form_search-wrap">
+          <form [formGroup]="userSearch" (ngSubmit)="onSubmit(userSearch.value.userText.toLowerCase())" >
+            <input class="search-input" placeholder="Type and hit Enter..." type="text" formControlName="userText">
+            <a href="#" class="search-close">
+              <span></span>
+              <span></span>
+            </a>
+            <input type="submit" hidden class="search-close" (click)="onSubmit(userSearch.value.userText.toLowerCase())">
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Nav bar -->
+    <nav id="Toggle-navbar" class="navbar-dark bg-main fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <a class="navbar-brand" href="#">
+                      <img src="../../assets/Pages/logo.PNG" alt="logo" style="width: 35px;" class="mr-2">
+                      New Solutions
+                    </a>
+                </div>
+                <div class="col-9 d-none d-xl-flex">
+                  <ul class="navbar-nav flex-row" style="font-weight: 600;">
+                    <li class="nav-item active mx-2 " [routerLinkActive]="['active-link']">
+                      <a class="nav-link" routerLink="/home">Home</a>
+                    </li>
+                    <li class="nav-item active mx-2" [routerLinkActive]="['active-link']">
+                      <a class="nav-link" routerLink="/about-us">About Us</a>
+                    </li>
+                    <li class="nav-item active mx-2" [routerLinkActive]="['active-link']">
+                      <a class="nav-link" routerLink="/our-clients">Our Clients</a>
+                    </li>
+                    <li class="nav-item active mx-2" [routerLinkActive]="['active-link']">
+                      <a class="nav-link" routerLink="/our-projects">Projects</a>
+                    </li>
+                    <li class="nav-item active mx-2" [routerLinkActive]="['active-link']">
+                      <a class="nav-link" routerLink="/contact-us">Contacts</a>
+                    </li>
+                    <li class="nav-item active mx-2" [routerLinkActive]="['active-link']" *ngIf="!isLogin">
+                      <a class="nav-link" routerLink="/login">Login</a>
+                    </li>
+                    <li class="nav-item active mx-2" [routerLinkActive]="['active-link']" *ngIf="!isLogin">
+                      <a class="nav-link" routerLink="/register">Register</a>
+                    </li>
+                    <li class="nav-item active mx-2" [routerLinkActive]="['active-link']" *ngIf="isAdmin">
+                      <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+                    </li>
+                  </ul>
+                  <ul  class="navbar-nav d-flex flex-row ml-auto text-white">
+                    <li class="mx-2 d-flex justify-content-center align-items-center pointer search-btn">
+                      <i class="fas fa-search"></i>
+                    </li>
+                    <li class="mx-2 d-flex justify-content-center align-items-center pointer" id="openInfoSidebar" (click)="openInfoSidebar()">
+                      <i class="fas fa-bars"></i>
+                    </li> 
+                    <li class="mx-2 d-flex justify-content-center align-items-center" *ngIf="isLogin">
+                      <i class="fas fa-sign-out-alt pointer" (click)="onLogOut()"></i>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-9 text-right">
+                  <h2 style="margin:0px;" id="openNav" (click)="openNav()"><span class="aside-nav pointer">☰</span></h2> 
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- aside bar -->
+    <aside id="mySidenav" class="sidenav">
+        <div class="container">
+          <a href="javascript:void(0)" class="closebtn" id="closeNav" (click)="closeNav()"> 
+            <i class="fas fa-times"></i>
+          </a>
+        </div>
+        <div class="mt-5">
+          <ul class="navbar-nav flex-column" style="font-weight: 600;">
+            <li class="nav-item active mx-2 mt-4">
+              <a class="nav-link" routerLink="/home" (click)="closeNav()">Home</a>
+            </li>
+            <li class="nav-item active mx-2">
+              <a class="nav-link" routerLink="/about-us" (click)="closeNav()">About Us</a>
+            </li>
+            <li class="nav-item active mx-2">
+              <a class="nav-link" routerLink="/our-clients" (click)="closeNav()">Our Clients</a>
+            </li>
+            <li class="nav-item active mx-2">
+              <a class="nav-link" routerLink="/our-projects" (click)="closeNav()">Projects</a>
+            </li>
+            <li class="nav-item active mx-2">
+              <a class="nav-link" routerLink="/contact-us" (click)="closeNav()">Contacts</a>
+            </li>
+            <li class="nav-item active mx-2" *ngIf="!isLogin">
+              <a class="nav-link" routerLink="/login" (click)="closeNav()">Login</a>
+            </li>
+            <li class="nav-item active mx-2" *ngIf="!isLogin">
+              <a class="nav-link" routerLink="/register" (click)="closeNav()">Register</a>
+            </li>
+            <li class="nav-item active mx-2" >
+              <a class="nav-link" routerLink="/dashboard" (click)="closeNav()" *ngIf="isAdmin || isSuperAdmin">Dashboard</a>
+            </li>
+            <li class="nav-item active mx-2" >
+              <a class="nav-link" routerLink="/dashboard/users" (click)="closeNav()" *ngIf="isSuperAdmin">Users</a>
+            </li>
+            <li class="nav-item active mx-2" *ngIf="isLogin">
+              <a class="nav-link pointer" (click)="onLogOut()">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+    </aside>
+    <!-- aside info -->
+    <aside id="contactInfo" class="sidenav">
+      <div class="container">
+        <a href="javascript:void(0)" class="closebtn" id="closeInfoSidebar" (click)="closeInfoSidebar()"> 
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+      <div class="mt-5">
+        <ul class="navbar-nav flex-column mx-4" style="font-weight: 600;">
+          <li class="my-2" style="word-break: break-all;"> 
+            <i class="far fa-envelope"></i>
+            {{contactInfo?.email}}
+            {{contactInfo?.Email}}
+          </li>
+          <li class="my-2"> 
+            <i class="fas fa-map-marker-alt"></i>
+            {{contactInfo?.Address}}
+            {{contactInfo?.address}}
+          </li>
+          <li class="my-2"> 
+            <i class="fas fa-phone"></i>
+            {{contactInfo?.phone}}
+            {{contactInfo?.Phone}}
+          </li>
+          <li class="my-2"><i class="far fa-clock"></i> Mon - Sat: 8.00 am - 7.00 pm</li>
+          <li class="my-2">We are creative, ambitious and ready for challenges! Hire Us</li>
+        </ul>
+
+        <div class="mx-auto my-2 icons">
+          <a target="_blank" href="{{SocialMedia?.twitterUrl}}{{SocialMedia?.TwitterUrl}}" class="text-reset text-decoration-none"> <i class="fab fa-twitter"></i> </a>
+          <a target="_blank" href="{{SocialMedia?.facebookUrl}}{{SocialMedia?.FacebookUrl}}" class="text-reset text-decoration-none"> <i class="fab fa-facebook-f"></i> </a>
+          <a target="_blank" href="{{SocialMedia?.linkedInUrl}}{{SocialMedia?.LinkedInUrl}}" class="text-reset text-decoration-none"> <i class="fab fa-linkedin-in"></i> </a>
+          <a target="_blank" href="{{SocialMedia?.instegramUrl}}{{SocialMedia?.InstegramUrl}}" class="text-reset text-decoration-none"> <i class="fab fa-instagram"></i> </a>
+        </div>
+        <div class="text-center font-weight-bold" *ngIf="userName">
+          <i class="my-2">WELCOME {{userName | uppercase}}</i>
+        </div>
+        <div class="text-center font-weight-bold">
+          <i class="my-2">{{date}}</i>
+        </div>
+
+      </div>
+    </aside>

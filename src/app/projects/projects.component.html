@@ -1,0 +1,117 @@
+    <header>
+    <!-- Home Section -->
+      <section id="section-home">
+        <div class="container p-0">
+          <div class="content d-flex justify-content-between align-items-center">
+            <h1 class="page-title text-white">Projects</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Our Projects</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section id="section2" class="py-5">
+      <div class="container px-0 py-5">
+        <div class="header-content text-center mx-3 mb-5">
+            <span>{{section1?.smallTitle}}</span>
+            <h2 class="main-heading"> 
+              {{section1?.bigTitle1}}
+              {{section1?.bigTitle2}}
+            </h2>
+            <p class="text-muted mt-4">
+              {{section1?.details}}
+            </p>
+        </div>
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-design-tab" data-toggle="pill" href="#pills-design" role="tab" aria-controls="pills-design" aria-selected="false">Design</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-development-tab" data-toggle="pill" href="#pills-development" role="tab" aria-controls="pills-development" aria-selected="false">Development</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-ideas-tab" data-toggle="pill" href="#pills-ideas" role="tab" aria-controls="pills-ideas" aria-selected="false">Ideas</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-technology-tab" data-toggle="pill" href="#pills-technology" role="tab" aria-controls="pills-technology" aria-selected="false">Technology</a>
+            </li>
+        </ul>
+        <div class="tab-content mt-5" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 my-3" *ngFor="let item of projectInfo">
+                  <div class="content pointer rounded">
+                    <img [src]="item?.projectImgUrl" class="img-fluid w-100" alt="project-image" style="height: 350px;"/>
+                    <a class="overlay text-reset text-decoration-none"  routerLink="/blog/{{item?.id}}">
+                      <h3>{{item?.bigTitle}}</h3>
+                      <span>{{item?.smallTitle}}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 my-3" *ngFor="let item of projectInfo" [class.hideElement]="item.category != 'Design'">
+                  <div class="content pointer" *ngIf="item.category == 'Design'">
+                    <img [src]="item?.projectImgUrl" class="img-fluid w-100" alt="project-image" style="height: 350px;"/>
+                    <a class="overlay text-reset text-decoration-none" routerLink="/blog/{{item?.id}}">
+                      <h3>{{item?.bigTitle}}</h3>
+                      <span>{{item?.smallTitle}}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-ideas" role="tabpanel" aria-labelledby="pills-ideas-tab">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 my-3" *ngFor="let item of projectInfo" [class.hideElement]="item.category != 'Ideas'">
+                  <div class="content pointer" *ngIf="item.category == 'Ideas'">
+                    <img [src]="item?.projectImgUrl" class="img-fluid w-100" alt="project-image" style="height: 350px;"/>
+                    <a class="overlay text-reset text-decoration-none" routerLink="/blog/{{item?.id}}">
+                      <h3>{{item?.bigTitle}}</h3>
+                      <span>{{item?.smallTitle}}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-development" role="tabpanel" aria-labelledby="pills-development-tab">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 my-3" *ngFor="let item of projectInfo" [class.hideElement]="item.category != 'Development'">
+                  <div class="content pointer" *ngIf="item.category == 'Development'">
+                    <img [src]="item?.projectImgUrl" class="img-fluid w-100" alt="project-image" style="height: 350px;"/>
+                    <a class="overlay text-reset text-decoration-none" routerLink="/blog/{{item?.id}}">
+                      <h3>{{item?.bigTitle}}</h3>
+                      <span>{{item?.smallTitle}}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-technology" role="tabpanel" aria-labelledby="pills-technology-tab">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 my-3" *ngFor="let item of projectInfo" [class.hideElement]="item.category != 'Technology'">
+                  <div class="content pointer" *ngIf="item.category == 'Technology'">
+                    <img [src]="item?.projectImgUrl" class="img-fluid w-100" alt="project-image" style="height: 350px;"/>
+                    <a class="overlay text-reset text-decoration-none" routerLink="/blog/{{item?.id}}">
+                      <h3>{{item?.bigTitle}}</h3>
+                      <span>{{item?.smallTitle}}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+

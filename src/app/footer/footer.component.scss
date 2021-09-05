@@ -1,0 +1,85 @@
+/* footer */
+
+footer{
+    background-color: #162534;
+}
+
+footer .footer-body h6{
+    font-family: "Nunito Sans",sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    color: #AEAACB
+}
+
+footer .footer-body p{
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+footer .footer-body i{
+    font-size: 35px;
+    color: #43BAFF;
+    margin-bottom: 20;
+}
+
+footer .footer ul li a{
+    color: inherit;
+    text-decoration: none;
+}
+
+footer .footer ul li{
+    margin: 15px 30px;
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+footer .footer ul li:hover{
+    color: #43BAFF
+}
+
+footer .footer p{
+    color: #AEAACB
+}
+
+footer .footer .contact-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+footer .footer .contact-icons a{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+footer .footer .contact-icons a:hover{
+    transform: translateY(-40%);
+}
+
+
+footer .footer .contact-icons i.fa-twitter{color: #6FC7E7}
+footer .footer .contact-icons i.fa-facebook-f{color: #224FDC}
+footer .footer .contact-icons i.fa-linkedin-in{color: #5298EB}
+footer .footer .contact-icons i.fa-instagram{color: #E8962E}
+
+/* media query */
+@media all and (max-width:991px){
+    footer .footer-body p{
+        font-size: 15px;
+    }
+}

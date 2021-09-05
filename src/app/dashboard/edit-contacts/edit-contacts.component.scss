@@ -1,0 +1,116 @@
+/* 2nd section */
+#contacts #section1{
+    overflow: hidden;
+}
+#contacts #section1 .header-content h2{
+    line-height: 48px;
+    font-size: 36px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+    color: #1b1d21;
+}
+
+#contacts #section1 .header-content span{
+    font-size: 14px;
+    font-weight: 700;
+    color: #7141b1;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+#contacts #section1 .contact-icons h6{
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 700;
+    color: #1b1d21;
+}
+#contacts #section1 .contact-icons{
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    margin: 10px 0px;
+}
+#contacts #section1 .contact-icons:hover{
+    box-shadow: 10px 10px 25px -5px rgba(0, 0, 0, 0.2);
+    cursor: auto;
+}
+
+#contacts #section1 .contact-form{
+    padding: 60px 48px;
+    background-image: linear-gradient( 90deg ,#00deff 0%,#7141b1 100%);
+    color: #fff;
+}
+
+#contacts #section1 .contact-form form h2{
+    margin-bottom: 10px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    font-size: 36px
+}
+
+
+#contacts #section1 .contact-form .contact-form-control {
+    display: block;
+    width: 100%;
+    height: calc(2em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background: rgba(255,255,255,.3);
+    border: 1px solid transparent;
+    outline: 0;
+}
+#contacts #section1 .contact-form .contact-form-control::placeholder{
+    color: #fff;
+}
+
+#contacts #section1 .contact-form textarea.contact-form-control {
+    height: auto;
+}
+
+#contacts #section1 .contact-form .contact-btn {
+    display: inline-block;
+    color: #1b1d21;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    font-weight: 700;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    font-size: 14px;
+    padding: 14px 30px 14px 30px;
+    line-height: 1.42857143;
+    margin-bottom: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    // cursor: pointer;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+#contacts #section1 .contact-form .contact-btn:hover{
+    background-color: #7141B1;
+    color: #fff;
+}
+/* =============================================================================================== */
+/* section map */
+@media all and (max-width:600px){
+    #contacts iframe{
+        height: 500px;
+    }
+}

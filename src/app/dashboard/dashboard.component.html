@@ -1,0 +1,360 @@
+<header>
+    <!-- Home Section -->
+    <section id="section-home">
+      <div class="container p-0">
+        <div class="content d-flex justify-content-between align-items-center">
+          <h1 class="page-title text-white">Dashboard</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/home" class="text-reset">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+              <li class="breadcrumb-item" *ngIf="isSuperAdmin"><a routerLink="users" class="text-reset">Users</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+</header>
+
+<main>
+    <div class="container py-5">
+        <div class="d-flex justify-content-center align-items-center flex-wrap">
+            <div class="span1 m-3 p-3 bg-main rounded-lg pointer" routerLink="edit-home">
+                <a  class="btn bg-main text-white">
+                    <span><strong>Edit Home</strong></span>            
+                </a>
+            </div>
+            <div class="span1 m-3 p-3 bg-main rounded-lg pointer" routerLink="edit-about">
+                <a  class="btn bg-main text-white">
+                    <span><strong>Edit About</strong></span>        	
+                </a>
+            </div>
+            <div class="span1 m-3 p-3 bg-main rounded-lg pointer" routerLink="edit-clients">
+                <a  class="btn bg-main text-white">
+                    <span><strong>Edit Clients</strong></span>       
+                </a> 	
+            </div>
+            <div class="span1 m-3 p-3 bg-main rounded-lg pointer" routerLink="edit-projects">
+                <a  class="btn bg-main text-white">
+                    <span><strong>Edit Projects</strong></span>        	
+                </a>
+            </div>
+            <div class="span1 m-3 p-3 bg-main rounded-lg pointer" routerLink="edit-contacts">
+                <a  class="btn bg-main text-white">
+                    <span><strong>Edit Contacts</strong></span>        	
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="container" id="ClientTable">
+    <div class="col-12">
+        <div class="panel panel-default">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="panel-heading text-muted">
+                    Clients Data
+                </div>
+                <div class="panel-heading">
+                    <button class="btn btn-info btn-sm" routerLink="edit-clients/new-client">Add New Client</button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table class="table table-condensed text-center">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Job Title</th>
+                        <th>Twitter</th>
+                        <th>LinkedIn</th>
+                        <th>Facebook</th>
+                        <th>Instegram</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                  <tbody *ngFor="let item of ClientsInfo; index as i">
+                    <tr>
+                        <td class="ClientName">{{item?.name}}</td>
+                        <td class="ClientJob">{{item?.jobTitle}}</td>
+                        <td class="Social-Media-Links">{{item?.twitterUrl}}</td>
+                        <td class="Social-Media-Links">{{item?.linkedInUrl}}</td>
+                        <td class="Social-Media-Links">{{item?.facebookUrl}}</td>
+                        <td class="Social-Media-Links">{{item?.instegramUrl}}</td>
+                        <td style="width: 125px;">
+                            <button class='btn btn-warning text-dark btn-sm mx-1' (click)="setDataIntoClientUpdateInputs(i)"
+                            data-toggle="collapse" attr.data-target="{{ClientCollapseButton+i}}">
+                                <i class="far fa-edit"></i></button>|<button class="btn btn-danger btn-sm mx-1" (click)="DeleteClient($event,item.id)">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="12" class="hiddenRow">
+                            <div class="accordian-body collapse" [id]="ClientCollapseId+i"> 
+                                <table class="table bg-main formTable">
+                                    <tbody>
+                                        <tr>
+                                        <td width="80%">
+                                            <form [formGroup]="updateClient" (ngSubmit)="UpdateClient(updateClient.value,$event,item.id)">
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Name</label>
+                                                    <input type="text" class="form-control" formControlName="Name">
+                                                    <small class="text-danger" *ngIf="updateClient.get('Name').invalid && updateClient.get('Name').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Job Title</label>
+                                                    <input type="text" class="form-control" formControlName="JobTitle">
+                                                    <small class="text-danger" *ngIf="updateClient.get('JobTitle').invalid && updateClient.get('JobTitle').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Twitter Url</label>
+                                                    <input type="text" class="form-control" formControlName="TwitterUrl">
+                                                    <small class="text-danger" *ngIf="updateClient.get('TwitterUrl').invalid && updateClient.get('TwitterUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">LinkedIn Url</label>
+                                                    <input type="text" class="form-control" formControlName="LinkedInUrl">
+                                                    <small class="text-danger" *ngIf="updateClient.get('LinkedInUrl').invalid && updateClient.get('LinkedInUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Facebook Url</label>
+                                                    <input type="text" class="form-control" formControlName="FacebookUrl">
+                                                    <small class="text-danger" *ngIf="updateClient.get('FacebookUrl').invalid && updateClient.get('FacebookUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">instegram Url</label>
+                                                    <input type="text" class="form-control" formControlName="instegramUrl">
+                                                    <small class="text-danger" *ngIf="updateClient.get('instegramUrl').invalid && updateClient.get('instegramUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <button class="btn-block btn bg-main3 text-white font-weight-bold" [disabled]="updateClient.invalid">Update</button>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div class="container my-5" id="EmployeeTable">
+    <div class="col-12">
+        <div class="panel panel-default">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="panel-heading text-muted">
+                    Employees Data
+                </div>
+                <div class="panel-heading">
+                    <button class="btn btn-info btn-sm" routerLink="employees">Add New Employee</button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table class="table table-condensed text-center">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Job Title</th>
+                        <th>Twitter</th>
+                        <th>LinkedIn</th>
+                        <th>Facebook</th>
+                        <th>Instegram</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                  <tbody *ngFor="let item of EmployeesInfo; index as i">
+                    <tr>
+                        <td class="ClientName">{{item?.name}}</td>
+                        <td class="ClientJob">{{item?.jobTitle}}</td>
+                        <td class="Social-Media-Links">{{item?.twitterUrl}}</td>
+                        <td class="Social-Media-Links">{{item?.linkedInUrl}}</td>
+                        <td class="Social-Media-Links">{{item?.facebookUrl}}</td>
+                        <td class="Social-Media-Links">{{item?.instegramUrl}}</td>
+                        <td style="width: 125px;">
+                            <button class='btn btn-warning text-dark btn-sm mx-1' (click)="setDataIntoEmployeeUpdateInputs(i)"
+                                    data-toggle="collapse" attr.data-target="{{EmployeeCollapseButton+i}}">
+                                <i class="far fa-edit"></i></button>|<button class="btn btn-danger btn-sm mx-1" (click)="DeleteEmployee($event,item.id)">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="12" class="hiddenRow">
+                            <div class="accordian-body collapse" [id]="EmployeeCollapseId+i"> 
+                                <table class="table bg-main formTable">
+                                    <tbody>
+                                        <tr>
+                                        <td width="80%">
+                                            <form [formGroup]="updateEmployee" (ngSubmit)="UpdateEmployee(updateEmployee.value,$event,item.id)">
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Name</label>
+                                                    <input type="text" class="form-control" formControlName="Name">
+                                                    <small class="text-danger" *ngIf="updateEmployee.get('Name').invalid && updateEmployee.get('Name').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Job Title</label>
+                                                    <input type="text" class="form-control" formControlName="JobTitle">
+                                                    <small class="text-danger" *ngIf="updateEmployee.get('JobTitle').invalid && updateEmployee.get('JobTitle').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Twitter Url</label>
+                                                    <input type="text" class="form-control" formControlName="TwitterUrl">
+                                                    <small class="text-danger" *ngIf="updateEmployee.get('TwitterUrl').invalid && updateEmployee.get('TwitterUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">LinkedIn Url</label>
+                                                    <input type="text" class="form-control" formControlName="LinkedInUrl">
+                                                    <small class="text-danger" *ngIf="updateEmployee.get('LinkedInUrl').invalid && updateEmployee.get('LinkedInUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Facebook Url</label>
+                                                    <input type="text" class="form-control" formControlName="FacebookUrl">
+                                                    <small class="text-danger" *ngIf="updateEmployee.get('FacebookUrl').invalid && updateEmployee.get('FacebookUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">instegram Url</label>
+                                                    <input type="text" class="form-control" formControlName="instegramUrl">
+                                                    <small class="text-danger" *ngIf="updateEmployee.get('instegramUrl').invalid && updateEmployee.get('instegramUrl').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <button class="btn-block btn bg-main3 text-white font-weight-bold" [disabled]="updateEmployee.invalid">Update</button>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div class="container my-5" id="projectTable">
+    <div class="col-12">
+        <div class="panel panel-default">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="panel-heading text-muted">
+                    Projects Data
+                </div>
+                <div class="panel-heading">
+                    <button class="btn btn-info btn-sm" routerLink="edit-projects/new-project">Add New Project</button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table class="table table-condensed text-center">
+                    <thead>
+                    <tr>
+                        <th>Big Title</th>
+                        <th>Small Title</th>
+                        <th>Category</th>
+                        <th>details</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                  <tbody *ngFor="let item of ProjectsInfo; index as i">
+                    <tr>
+                        <td>{{item?.bigTitle}}</td>
+                        <td>{{item?.smallTitle}}</td>
+                        <td>{{item?.category}}</td>
+                        <td>{{item?.details}}</td>
+                        <td style="width: 125px;">
+                            <button class='btn btn-warning text-dark btn-sm mx-1' (click)="setDataIntoProjectUpdateInputs(i)"
+                                    data-toggle="collapse" attr.data-target="{{ProjectCollapseButton+i}}">
+                                <i class="far fa-edit"></i></button>|<button class="btn btn-danger btn-sm mx-1" (click)="DeleteProject($event,item.id)">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="12" class="hiddenRow">
+                            <div class="accordian-body collapse" [id]="ProjectCollapseId+i"> 
+                                <table class="table bg-main formTable">
+                                    <tbody>
+                                        <tr>
+                                        <td width="80%">
+                                            <form [formGroup]="updateProject" (ngSubmit)="UpdateProject(updateProject.value,$event,item.id)">
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Big Title</label>
+                                                    <input type="text" class="form-control" formControlName="BigTitle">
+                                                    <small class="text-danger" *ngIf="updateProject.get('BigTitle').invalid && updateProject.get('BigTitle').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Small Title</label>
+                                                    <input type="text" class="form-control" formControlName="SmallTitle">
+                                                    <small class="text-danger" *ngIf="updateProject.get('SmallTitle').invalid && updateProject.get('SmallTitle').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Category</label>
+                                                    <select class="form-control m-auto text-info font-weight-bold" formControlName="Category">
+                                                        <option value="Design">Design</option>
+                                                        <option value="Development">Development</option>
+                                                        <option value="Ideas">Ideas</option>
+                                                        <option value="Technology">Technology</option>
+                                                    </select>
+                                                    <small class="text-danger" *ngIf="updateProject.get('Category').invalid && updateProject.get('Category').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <label class="text-white pr-3 pt-1" style="font-weight: 600;width: 150px;">Details</label>
+                                                    <textarea class="form-control" rows="10" formControlName="details"></textarea>
+                                                    <small class="text-danger" *ngIf="updateProject.get('details').invalid && updateProject.get('details').touched">
+                                                        This field is required!
+                                                    </small>
+                                                </div>
+                                                <div class="form-group d-flex">
+                                                    <button class="btn-block btn bg-main3 text-white font-weight-bold" [disabled]="updateProject.invalid">Update</button>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>
+</div>

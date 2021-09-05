@@ -1,0 +1,147 @@
+/* 2nd section */
+#section2{
+    overflow: hidden;
+}
+#section2 .header-content h2{
+    line-height: 48px;
+    font-size: 36px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+    color: #1b1d21;
+}
+
+#section2 .header-content span{
+    font-size: 14px;
+    font-weight: 700;
+    color: #7141b1;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+#section2 .body .team-info h4{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+#section2 .body .team-info span {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #797979;
+}
+
+#section2 .body .teamMembers div{
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+#section2 .body .teamMembers > div:hover{
+    box-shadow: 0px 8px 25px rgba(0,0,0,.3);
+}
+
+#section2 .body .teamMembers .team-profile{
+    position: relative;
+    overflow: hidden;
+}
+
+#section2 .body .teamMembers .team-profile .team-contact{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 3px 17px;
+    background-color: #262051;
+    transform: translate(100%,-50%);
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+
+#section2 .body .teamMembers .team-profile .team-contact a{
+    display: block;
+    color: #9390a8;
+    font-size: 14px;
+    line-height: 1;
+    margin: 20px 0;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+}
+
+#section2 .body .teamMembers > div:hover .team-profile .team-contact{
+    transform: translate(0%,-50%);
+} 
+
+#section2 .body .teamMembers .team-profile .team-contact a:hover{
+    color: #43BAFF;
+}
+
+/* media query */
+@media all and (max-width:600px){
+    #section2 .header-content h2{
+        line-height: 38px;
+        font-size: 26px;
+    }
+}
+
+/* =============================================================================================== */
+/* section3 */
+#section3 .container{
+    background-image: url("../../assets/Pages/OurClients/section3/bg-cta1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section3 .title h2{
+    line-height: 48px;
+    font-size: 36px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 800;
+}
+
+#section3 .title span{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#section3 button{
+    font-family: "Nunito Sans",Sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #43BAFF;
+    border-radius: 0 0 0 0;
+    padding: 16px 35px 16px 35px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+#section3 button:hover{
+    background-color: #7141b1;
+}
+
+@media all and (max-width:991px){
+    #section3 .container{
+        justify-content: center !important;
+    }
+    #section3 button{
+        margin: 0 !important;
+    }
+}
+
+@media all and (max-width:767px){
+    #section3 .container{
+        text-align: center;
+    }
+    #section3 .title h2{
+        font-size: 30px;
+    }
+
+    #section3 .title{
+        margin-left: 0px !important;
+    }
+}

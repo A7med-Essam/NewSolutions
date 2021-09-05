@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+/* defaults */
+.text-main{
+    color: #141D38;
+}
+.text-main2{
+    color: #7141b1;
+}
+.text-main3{
+    color: #43BAFF;
+}
+.bg-main{
+    background-color: #141D38;
+}
+.bg-main2{
+    background-color: #7141b1;
+}
+.bg-main3{
+    background-color: #43BAFF;
+}
+body{
+    overflow: hidden;
+}
+.pointer{
+    cursor: pointer;
+}
+
+/* header section */
+#section-home{
+    background-image: url("assets/Pages/bg-header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat",sans-serif;
+}
+
+#section-home .content ol{
+    text-transform: uppercase;
+}
+
+#section-home .content h1{
+    font-weight: 800;
+    font-size: 40px;
+}
+.breadcrumb{
+    background-color: transparent !important;
+    font-weight: 800;
+}
+
+.breadcrumb li.active{
+    color: #fff;
+}
+.breadcrumb li:not(.active){
+    color: #8E88B8 !important;
+}
+
+@media all and (max-width:991px){
+    #section-home .content{
+        flex-direction: column;
+    }
+}
